@@ -10,7 +10,7 @@ function initKeycloak() {
 }
 
 function constructTableRows(keycloakToken) {
-    document.getElementById('row-username').innerHTML = keycloakToken.preferred_username;
+    document.getElementById('row-username').innerHTML = keycloakToken.gebruikersnaam;
     document.getElementById('row-firstName').innerHTML = keycloakToken.given_name;
     document.getElementById('row-lastName').innerHTML = keycloakToken.family_name;
     document.getElementById('row-name').innerHTML = keycloakToken.name;
