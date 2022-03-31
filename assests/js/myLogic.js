@@ -15,6 +15,7 @@ function constructTableRows(keycloakToken) {
     document.getElementById('row-lastName').innerHTML = keycloakToken.family_name;
     document.getElementById('row-name').innerHTML = keycloakToken.name;
     document.getElementById('row-email').innerHTML = keycloakToken.email;
+    document.getElementById('row-functies').innerHTML = keycloakToken.functies;
 }
 
 function pasteToken(token){
