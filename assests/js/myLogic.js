@@ -32,5 +32,5 @@ var refreshToken = function() {
 }
 
 var logout = function() {
-    keycloak.logout({"redirectUri":"http://localhost:9091/logout.html"});
+    keycloak.logout({"redirectUri":"https://zeescoutstoxandria.netlify.app/logout.html"});
 }
