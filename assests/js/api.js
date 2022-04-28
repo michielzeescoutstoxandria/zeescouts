@@ -1,7 +1,6 @@
 const userAction = async () => {
-    const response = await fetch('http://example.com/movies.json', {
-      method: 'POST',
-      body: myBody, // string or object
+    const response = await fetch('https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/', {
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
