@@ -101,5 +101,5 @@ const loadData = function () {
   }
 
   req.send();
-  document.getElementById("employees").innerHTML = xhttp.responseText;
+  document.getElementById("employees").innerHTML = req.responseText;
 }
