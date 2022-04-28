@@ -15,7 +15,7 @@ function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
-      getapi(api_url, keycloak.token);
+      // getapi(api_url, keycloak.token);
       loadData();
       // console.log(keycloak.token);
       // alert('auth')
@@ -95,6 +95,7 @@ const loadData = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
               alert('Success');
+              console.log(req.response);
               
           } else if (req.status == 403) {
               alert('Forbidden');
@@ -104,5 +105,5 @@ const loadData = function () {
 
   req.send();
   document.getElementById("employees").innerHTML = req.response;
-  console.log(req.response);
+  
 }
