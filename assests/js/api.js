@@ -75,5 +75,8 @@ function json(json) {
   var functies = json.functies;
   for (var i = 0; i < functies.length; i++){
     console.log(functies[i].omschrijving)
+    if(functies[i].omschrijving == "Materiaalmeester"){
+      alert('bingo');
+    }
   }
 }
