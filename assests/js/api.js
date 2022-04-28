@@ -23,7 +23,7 @@ function initKeycloak() {
 }
 
 
-const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie?groep=A4122G";
+const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel";
 
   
 // Defining async function
