@@ -9,7 +9,7 @@
 
 // api url
 const api_url = 
-      "https://employeedetails.free.beeceptor.com/my/api/path";
+      "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/";
   
 // Defining async function
 async function getapi(url) {
