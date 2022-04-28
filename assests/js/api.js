@@ -36,7 +36,6 @@ async function getapi(url, token) {
     // Storing response
     const response = await fetch(url, {
       mode: 'no-cors',
-      Content: 'application/json',
       headers : auth});
     
     // Storing data in form of JSON
