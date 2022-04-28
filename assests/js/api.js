@@ -17,7 +17,8 @@ async function getapi(url) {
     // Storing response
     const response = await fetch(url, {
       mode: 'no-cors',
-      Content: 'application/json'});
+      Content: 'application/json',
+      Authorization: 'Bearer' + keycloak.token});
     
     // Storing data in form of JSON
     var data = response;
