@@ -15,6 +15,7 @@ function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
+      getapi(api_url, keycloak.token);
       loadData();
       // console.log(keycloak.token);
       // alert('auth')
