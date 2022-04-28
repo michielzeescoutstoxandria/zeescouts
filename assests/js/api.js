@@ -15,7 +15,7 @@ function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
-      getapi(api_url, keycloak.idTokenParsed);
+      getapi(api_url, keycloak.token);
       // console.log(keycloak.token);
   }).catch(function() {
       alert('failed to initialize');
@@ -36,7 +36,10 @@ async function getapi(url, token) {
     // Storing response
     const response = await fetch(url, {
       mode: 'no-cors',
-      headers : auth});
+      headers : {
+        auth,
+        'Content-Type': 'application/json'
+    }});
     
     // Storing data in form of JSON
     var data = response;
