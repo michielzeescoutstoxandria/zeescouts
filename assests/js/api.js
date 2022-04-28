@@ -81,7 +81,7 @@ function show(data) {
 }
 
 const loadData = function () {
-  document.getElementById('username').innerText = keycloak.subject;
+  // document.getElementById('username').innerText = keycloak.subject;
 
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
 
