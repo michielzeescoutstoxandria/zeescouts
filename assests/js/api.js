@@ -15,8 +15,9 @@ function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
-      loadData();
+      // loadData();
       // console.log(keycloak.token);
+      alert('auth')
   }).catch(function() {
       alert('failed to initialize');
   });
@@ -100,4 +101,4 @@ const loadData = function () {
   }
 
   req.send();
-};
+}
