@@ -83,7 +83,7 @@ function show(data) {
 const loadData = function () {
   // document.getElementById('username').innerText = keycloak.subject;
 
-  const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga';
+  const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie';
 
   const req = new XMLHttpRequest();
   req.open('GET', url, true);
