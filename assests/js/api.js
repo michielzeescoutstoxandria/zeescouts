@@ -15,21 +15,20 @@ function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
-      // getapi(api_url);
-      console.log(keycloak.token);
+      getapi(api_url, keycloak.token);
+      // console.log(keycloak.token);
   }).catch(function() {
       alert('failed to initialize');
   });
 }
 
 
-const api_url = 
-      "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";
-var auth = { "Authorization" : `Bearer ${keycloak.token}` };
+const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";
 
   
 // Defining async function
-async function getapi(url) {
+async function getapi(url, token) {
+    var auth = { "Authorization" : `Bearer ${token}` };
     
     // Storing response
     const response = await fetch(url, {
