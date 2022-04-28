@@ -16,7 +16,7 @@ function initKeycloak() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
       // getapi(api_url);
-      console.log(keycloak.idTokenParsed);
+      console.log(keycloak.Token);
   }).catch(function() {
       alert('failed to initialize');
   });
