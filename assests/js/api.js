@@ -24,6 +24,7 @@ function initKeycloak() {
 
 const api_url = 
       "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";
+var auth = { "Authorization" : `Bearer ${keycloak.token}` };
   
 // Defining async function
 async function getapi(url) {
@@ -32,7 +33,7 @@ async function getapi(url) {
     const response = await fetch(url, {
       mode: 'no-cors',
       Content: 'application/json',
-      Authorization: 'Bearer ' + keycloak.token});
+      headers : auth});
     
     // Storing data in form of JSON
     var data = response;
