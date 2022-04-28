@@ -15,9 +15,8 @@ function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
+      loadData();
       // console.log(keycloak.token);
-      
-      getapi(api_url, keycloak.token);
   }).catch(function() {
       alert('failed to initialize');
   });
@@ -29,7 +28,6 @@ const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/res
   
 // Defining async function
 async function getapi(url, token) {
-  keycloak.updateToken(30).then(function() {
     console.log(token);
     var auth = { "Authorization" : `Bearer ${token}` };
 
@@ -50,9 +48,6 @@ async function getapi(url, token) {
     //     hideloader();
     // }
     // show(data);
-  }).catch(function() {
-    alert('Failed to refresh token');
-});
 }
 // Calling that async function
 
@@ -83,3 +78,26 @@ function show(data) {
     // Setting innerHTML as tab variable
     document.getElementById("employees").innerHTML = tab;
 }
+
+const loadData = function () {
+  document.getElementById('username').innerText = keycloak.subject;
+
+  const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
+
+  const req = new XMLHttpRequest();
+  req.open('GET', url, true);
+  req.setRequestHeader('Accept', 'application/json');
+  req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
+
+  req.onreadystatechange = function () {
+      if (req.readyState == 4) {
+          if (req.status == 200) {
+              alert('Success');
+          } else if (req.status == 403) {
+              alert('Forbidden');
+          }
+      }
+  }
+
+  req.send();
+};
