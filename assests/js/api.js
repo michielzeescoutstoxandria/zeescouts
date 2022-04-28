@@ -96,7 +96,7 @@ const loadData = function () {
           if (req.status == 200) {
               alert('Success');
               console.log(req.response);
-              document.getElementById("employees").innerHTML = req.response;
+              document.getElementById("employees").innerHTML = req.responseJSON;
               
           } else if (req.status == 403) {
               alert('Forbidden');
