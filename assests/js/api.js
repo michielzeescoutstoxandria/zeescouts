@@ -15,8 +15,9 @@ function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
-      getapi(api_url, keycloak.token);
       // console.log(keycloak.token);
+      
+      getapi(api_url, keycloak.token);
   }).catch(function() {
       alert('failed to initialize');
   });
@@ -28,6 +29,7 @@ const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/res
   
 // Defining async function
 async function getapi(url, token) {
+  keycloak.updateToken(30).then(function() {
     console.log(token);
     var auth = { "Authorization" : `Bearer ${token}` };
 
@@ -48,6 +50,9 @@ async function getapi(url, token) {
     //     hideloader();
     // }
     // show(data);
+  }).catch(function() {
+    alert('Failed to refresh token');
+});
 }
 // Calling that async function
 
