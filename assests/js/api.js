@@ -20,12 +20,12 @@ async function getapi(url) {
       Content: 'application/json'});
     
     // Storing data in form of JSON
-    var data = await response.json();
+    var data = response;
     console.log(data);
-    if (response) {
-        hideloader();
-    }
-    show(data);
+    // if (response) {
+    //     hideloader();
+    // }
+    // show(data);
 }
 // Calling that async function
 getapi(api_url);
