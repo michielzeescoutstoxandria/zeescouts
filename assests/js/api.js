@@ -95,9 +95,10 @@ const loadData = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
               alert('Success');
-              console.log(req.response);
+              
               var myArr = JSON.parse(this.responseText);
               document.getElementById("employees").innerHTML = myArr;
+              console.log(myArr);
               
           } else if (req.status == 403) {
               alert('Forbidden');
