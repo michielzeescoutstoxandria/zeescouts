@@ -30,6 +30,8 @@ const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/res
 async function getapi(url, token) {
     console.log(token);
     var auth = { "Authorization" : `Bearer ${token}` };
+
+    console.log(auth);
     
     // Storing response
     const response = await fetch(url, {
