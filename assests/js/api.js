@@ -31,7 +31,7 @@ const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/res
 // Defining async function
 async function getapi(url, token) {
     console.log(token);
-    var auth = { "Authorization" : `Bearer ${token}` };
+    var auth = { Authorization : `Bearer ${token}` };
 
     console.log(auth);
     
