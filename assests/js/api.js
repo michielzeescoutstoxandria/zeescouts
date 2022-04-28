@@ -23,7 +23,7 @@ function initKeycloak() {
 
 
 const api_url = 
-      "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid";
+      "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";
   
 // Defining async function
 async function getapi(url) {
