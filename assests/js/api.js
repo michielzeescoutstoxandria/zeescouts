@@ -16,6 +16,7 @@ function initKeycloak() {
       // constructTableRows(keycloak.idTokenParsed);
       // pasteToken(keycloak.token);
       // getapi(api_url);
+      console.log(keycloak.idTokenParsed);
   }).catch(function() {
       alert('failed to initialize');
   });
@@ -25,7 +26,7 @@ function initKeycloak() {
 const api_url = 
       "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";
 var auth = { "Authorization" : `Bearer ${keycloak.token}` };
-console.log(keycloak.idTokenParsed);
+
   
 // Defining async function
 async function getapi(url) {
