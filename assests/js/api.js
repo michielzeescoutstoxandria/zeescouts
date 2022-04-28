@@ -73,5 +73,5 @@ const loadData = function () {
 
 function json(json) {
   var functie = json.functie;
-  console.log(functie);
+  console.log(json);
 }
