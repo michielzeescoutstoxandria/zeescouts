@@ -25,6 +25,7 @@ function initKeycloak() {
 const api_url = 
       "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";
 var auth = { "Authorization" : `Bearer ${keycloak.token}` };
+console.log(keycloak.token);
   
 // Defining async function
 async function getapi(url) {
