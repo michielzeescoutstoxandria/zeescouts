@@ -8,6 +8,8 @@
 //   }
 
 // api url
+
+var keycloak = new Keycloak();
 const api_url = 
       "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/";
   
