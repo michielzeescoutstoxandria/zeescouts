@@ -77,6 +77,8 @@ function json(json) {
     console.log(functies[i].omschrijving)
     if(functies[i].omschrijving == "Materiaalmeester"){
       alert('bingo');
+    } else {
+      alert('non')
     }
   }
 }
