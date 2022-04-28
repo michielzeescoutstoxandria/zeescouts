@@ -94,6 +94,7 @@ const loadData = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
               alert('Success');
+              
           } else if (req.status == 403) {
               alert('Forbidden');
           }
@@ -102,4 +103,5 @@ const loadData = function () {
 
   req.send();
   document.getElementById("employees").innerHTML = req.responseText;
+  console.log(req.responseText);
 }
