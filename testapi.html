@@ -1,9 +1,0 @@
-const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie?groep=A4122G';
-
-function getUsers() {
-    fetch(url)
-        .then(response => response.json)
-        .then(json => console.log(json))
-        .catch((error) => console.log(error));
-}
-getUsers();
