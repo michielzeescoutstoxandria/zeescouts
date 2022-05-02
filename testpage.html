@@ -34,53 +34,10 @@
 <link rel="stylesheet" type="text/css" media="all" href="/pages/FrontPage2017/Styles/corpweb_bundle.min.css?_v=7dc351fd91739a1cbeb8ceaa5eec8067" />
 
 <script type="text/javascript" src="https://consent.cookiebot.com/uc.js" id="Cookiebot" data-cbid="10ca8cd2-0891-434f-9db8-05fd06bcf3ed" data-blockingmode="auto"></script>
-<script type="text/javascript" src="/pages/FrontPage2017/Scripts/corpweb_bundle.min.js?_v=9a131c30f7baaad03e3fc16e2f663f2a"></script>
+<script type="text/javascript" src="https://nl.simplesite.com/pages/FrontPage2017/Scripts/corpweb_bundle.min.js?_v=9a131c30f7baaad03e3fc16e2f663f2a"></script>
 
-<script type="text/javascript">
 
-				const cyrb53 = function(str, seed = 0) {
-					let h1 = 0xdeadbeef ^ seed,
-						h2 = 0x41c6ce57 ^ seed;
-					for (let i = 0, ch; i < str.length; i++)
-					{
-						ch = str.charCodeAt(i);
-						h1 = Math.imul(h1 ^ ch, 2654435761);
-						h2 = Math.imul(h2 ^ ch, 1597334677);
-					}
-					h1 = Math.imul(h1 ^ h1 >>> 16, 2246822507) ^ Math.imul(h2 ^ h2 >>> 13, 3266489909);
-					h2 = Math.imul(h2 ^ h2 >>> 16, 2246822507) ^ Math.imul(h1 ^ h1 >>> 13, 3266489909);
-					return 4294967296 * (2097151 & h2) + (h1 >>> 0);
-				};
-
-			let clientIP = '81.83.107.174, 64.252.171.163';
-			let validityInterval = Math.round(new Date() / 1000 / 3600 / 24 / 4);
-			let clientIDSource = clientIP + ";" + window.location.host + ";" + navigator.userAgent + ";" + navigator.language + ";" + validityInterval;
-			let clientIDHashed = cyrb53(clientIDSource).toString(16);
-
-			(function(i, s, o, g, r, a, m) {
-				i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() {
-					(i[r].q = i[r].q || []).push(arguments)
-	   
-					}, i[r].l = 1 * new Date(); a = s.createElement(o),
-						m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-   
-					})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-				let acc = 'UA-3475563-9';
-				ga('create', acc, {
-					'storage': 'none',
-				'allowLinker': true,
-				'clientId': clientIDHashed
-	
-				});
-				ga('set', 'anonymizeIp', true);
-				ga('set', {
-						'dimension1': 'MainSite'
-				});
-				ga('send', 'pageview');
-
-			</script>
-<link href="/pages/frontpage2017/Styles/Slider.css" rel="stylesheet" />
+<link href="https://nl.simplesite.com//pages/frontpage2017/Styles/Slider.css" rel="stylesheet" />
 <style>
     #CybotCookiebotDialogBodyContentText p {
         color: #2a2a2a;
