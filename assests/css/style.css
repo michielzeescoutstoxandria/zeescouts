@@ -1,5 +1,17 @@
-.head{
+body, html {
+    height: 100%;
+  }
+  
+.head {
+    /* The image used */
     background-image: url("assests/img/279703968_10159429212000589_3796083311920730025_n.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+  }
+  
