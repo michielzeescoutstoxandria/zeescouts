@@ -1,4 +1,5 @@
 .head{
     background-image: url("assests/img/279703968_10159429212000589_3796083311920730025_n.jpg");
-    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
