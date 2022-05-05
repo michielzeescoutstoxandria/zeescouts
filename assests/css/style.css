@@ -19,3 +19,6 @@ body, html {
     opacity: 80%;
   }
   
+  li {
+    display: inline;
+  }
