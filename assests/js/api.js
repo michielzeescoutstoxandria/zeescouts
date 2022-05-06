@@ -88,5 +88,6 @@ function login(){
   if({onLoad: 'login-required'}){
     window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
   }
+  loadData();
   
 }
