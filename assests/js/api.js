@@ -46,6 +46,7 @@ function hideloader() {
 const materiaalmeester = function () {
   // document.getElementById('username').innerText = keycloak.subject;
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
+  console.log("materiaal ok");
 
   const req = new XMLHttpRequest();
   req.open('GET', url, true);
@@ -69,6 +70,7 @@ const materiaalmeester = function () {
 }
 
 function materiaalmeestercheck(json) {
+  console.log("check");
   var functies = json.functies;
   var materiaalmeester = false;
   for (var i = 0; i < functies.length; i++){
