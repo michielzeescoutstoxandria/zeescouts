@@ -43,7 +43,7 @@ function hideloader() {
     document.getElementById('loading').style.display = 'none';
 }
 
-const materiaalmeester = function () {
+function materiaalmeester() {
   // document.getElementById('username').innerText = keycloak.subject;
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
   console.log("materiaal ok");
