@@ -56,7 +56,7 @@ const materiaalmeester = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
             var myArr = JSON.parse(this.responseText);
-            materiaalmeestercheck(myArr);
+            return(materiaalmeestercheck(myArr));
               
           } else if (req.status == 403) {
               alert('Forbidden');
