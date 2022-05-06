@@ -73,12 +73,12 @@ function materiaalmeestercheck() {
   console.log("check")
   // var functies = json.functies;
   var materiaalmeester = false;
-  for (var i = 0; i < functies.length; i++){
-    console.log(functies[i].omschrijving)
-    if(functies[i].omschrijving == "Materiaalmeester"){
-      materiaalmeester = true;
-    }
-  }
+  // for (var i = 0; i < functies.length; i++){
+  //   console.log(functies[i].omschrijving)
+  //   if(functies[i].omschrijving == "Materiaalmeester"){
+  //     materiaalmeester = true;
+  //   }
+  // }
   return materiaalmeester;
 }
 
