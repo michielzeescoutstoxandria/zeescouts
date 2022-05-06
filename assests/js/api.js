@@ -43,9 +43,8 @@ function hideloader() {
     document.getElementById('loading').style.display = 'none';
 }
 
-const loadData = function () {
+const materiaalmeester = function () {
   // document.getElementById('username').innerText = keycloak.subject;
-
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
 
   const req = new XMLHttpRequest();
@@ -57,7 +56,7 @@ const loadData = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
             var myArr = JSON.parse(this.responseText);
-            json(myArr);
+            materiaalmeestercheck(myArr);
               
           } else if (req.status == 403) {
               alert('Forbidden');
@@ -68,14 +67,12 @@ const loadData = function () {
   req.send();
 }
 
-function json(json) {
+function materiaalmeestercheck(json) {
   var functies = json.functies;
   for (var i = 0; i < functies.length; i++){
     console.log(functies[i].omschrijving)
     if(functies[i].omschrijving == "Materiaalmeester"){
-      alert('bingo');
-    } else {
-      alert('non')
+      return true;
     }
   }
 }
@@ -83,9 +80,11 @@ function json(json) {
 function login(){
   initKeycloak();
   console.log(keycloak);
-  // if(keycloak.authenticated == ){
-  //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
-  // }
-  // loadData();
-  
+  if(keycloak.authenticated == true){
+    if(materiaalmeester() == true){
+      window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
+    } else {
+      window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
+    }
+  }  
 }
