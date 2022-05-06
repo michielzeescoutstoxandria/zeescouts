@@ -81,7 +81,7 @@ function json(json) {
 }
 
 function login(){
-  // initKeycloak();
+  initKeycloak();
   console.log(keycloak);
   // if(keycloak.authenticated == ){
   //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
