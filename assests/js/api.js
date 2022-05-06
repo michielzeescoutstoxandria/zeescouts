@@ -85,9 +85,9 @@ function json(json) {
 
 function login(){
   initKeycloak();
-  if({onLoad: 'login-required'}){
-    window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
-  }
-  loadData();
+  // if({onLoad: 'login-required'}){
+  //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
+  // }
+  // loadData();
   
 }
