@@ -84,6 +84,7 @@ function materiaalmeestercheck() {
 
 function login(){
   initKeycloak();
+  console.log(keycloak);
   console.log(keycloak.authenticated);
   if(keycloak.authenticated == true){
     console.log(materiaalmeestercheck());
