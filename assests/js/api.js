@@ -81,8 +81,8 @@ function materiaalmeestercheck(json) {
 
 function login(){
   initKeycloak();
-  console.log(keycloak);
   if(keycloak.authenticated == true){
+    console.log(materiaalmeester());
     if(materiaalmeester() == true){
       window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
     } else {
