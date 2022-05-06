@@ -43,7 +43,7 @@ function hideloader() {
     document.getElementById('loading').style.display = 'none';
 }
 
-function materiaalmeester() {
+const materiaalmeester = function () {
   // document.getElementById('username').innerText = keycloak.subject;
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
   console.log("materiaal ok");
@@ -53,24 +53,24 @@ function materiaalmeester() {
   req.setRequestHeader('Accept', 'application/json');
   req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
 
-  req.onreadystatechange = function () {
-      if (req.readyState == 4) {
-          if (req.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            return(materiaalmeestercheck(myArr));
+  // req.onreadystatechange = function () {
+  //     if (req.readyState == 4) {
+  //         if (req.status == 200) {
+  //           var myArr = JSON.parse(this.responseText);
+  //           return(materiaalmeestercheck(myArr));
               
-          } else if (req.status == 403) {
-              alert('Forbidden');
-          }
-      }
-  }
+  //         } else if (req.status == 403) {
+  //             alert('Forbidden');
+  //         }
+  //     }
+  // }
 
   req.send();
   return;
 }
 
 function materiaalmeestercheck(json) {
-  console.log("check");
+  console.log("check")
   var functies = json.functies;
   var materiaalmeester = false;
   for (var i = 0; i < functies.length; i++){
