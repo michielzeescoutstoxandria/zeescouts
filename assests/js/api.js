@@ -86,12 +86,12 @@ function login(){
   initKeycloak();
   console.log(keycloak);
   console.log(keycloak.authenticated);
-  if(keycloak.authenticated == true){
-    console.log(materiaalmeestercheck());
-    // if(materiaalmeester() == true){
-    //   window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
-    // } else {
-    //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
-    // }
-  }  
+  // if(keycloak.authenticated == true){
+  //   console.log(materiaalmeestercheck());
+  //   // if(materiaalmeester() == true){
+  //   //   window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
+  //   // } else {
+  //   //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
+  //   // }
+  // }  
 }
