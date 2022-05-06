@@ -86,7 +86,7 @@ function login(){
   initKeycloak();
   console.log(keycloak);
   console.log(keycloak.authenticated);
-  console.log(keycloak);
+  console.log(keycloak.sessionIdt);
 
   // if(keycloak.authenticated == true){
   //   console.log(materiaalmeestercheck());
