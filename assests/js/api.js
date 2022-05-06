@@ -1,13 +1,5 @@
 var keycloak = new Keycloak();
 
-function initKeycloak() {
-  keycloak.init({onLoad: 'login-required'}).then(function() {
-      // return;
-  }).catch(function() {
-      alert('failed to initialize');
-  });
-}
-
 
 const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";
 
@@ -83,13 +75,15 @@ function materiaalmeestercheck() {
 }
 
 function login(){
-  // initKeycloak();
-  // if(keycloak.authenticated == true){
+  keycloak.init({onLoad: 'login-required'}).catch(function() {
+      alert('failed to initialize');
+  });
+  if(keycloak.authenticated == true){
     console.log(materiaalmeestercheck());
     // if(materiaalmeester() == true){
     //   window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
     // } else {
     //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
     // }
-  // }  
+  }  
 }
