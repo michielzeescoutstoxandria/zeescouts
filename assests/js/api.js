@@ -2,10 +2,7 @@ var keycloak = new Keycloak();
 
 function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
-      // getapi(api_url, keycloak.token);
-      loadData();
-      // console.log(keycloak.token);
-      // alert('auth')
+      return;
   }).catch(function() {
       alert('failed to initialize');
   });
@@ -85,9 +82,9 @@ function json(json) {
 
 function login(){
   initKeycloak();
-  // if({onLoad: 'login-required'}){
-  //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
-  // }
+  if({onLoad: 'login-required'}){
+    window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
+  }
   // loadData();
   
 }
