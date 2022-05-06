@@ -69,12 +69,14 @@ const materiaalmeester = function () {
 
 function materiaalmeestercheck(json) {
   var functies = json.functies;
+  var materiaalmeester = false;
   for (var i = 0; i < functies.length; i++){
     console.log(functies[i].omschrijving)
     if(functies[i].omschrijving == "Materiaalmeester"){
-      return true;
+      materiaalmeester = true;
     }
   }
+  return materiaalmeester;
 }
 
 function login(){
