@@ -51,7 +51,8 @@ const materiaalmeester = function () {
   const req = new XMLHttpRequest();
   req.open('GET', url, true);
   req.setRequestHeader('Accept', 'application/json');
-  req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
+  req.setRequestHeader('mode', 'no-cors');
+    req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
 
   req.onreadystatechange = function () {
       if (req.readyState == 4) {
