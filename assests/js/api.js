@@ -69,9 +69,9 @@ const materiaalmeester = function () {
   return;
 }
 
-function materiaalmeestercheck() {
+function materiaalmeestercheck(json) {
   console.log("check")
-  // var functies = json.functies;
+  var functies = json.functies;
   var materiaalmeester = false;
   for (var i = 0; i < functies.length; i++){
     console.log(functies[i].omschrijving)
@@ -89,7 +89,7 @@ function login(){
   console.log(keycloak.sessionId);
 
   // if(keycloak.authenticated == true){
-    console.log(materiaalmeestercheck());
+    console.log(materiaalmeester());
     if(materiaalmeester() == true){
       window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
     } else {
