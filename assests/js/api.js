@@ -53,17 +53,17 @@ const materiaalmeester = function () {
   req.setRequestHeader('Accept', 'application/json');
   req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
 
-  // req.onreadystatechange = function () {
-  //     if (req.readyState == 4) {
-  //         if (req.status == 200) {
-  //           var myArr = JSON.parse(this.responseText);
-  //           return(materiaalmeestercheck(myArr));
+  req.onreadystatechange = function () {
+      if (req.readyState == 4) {
+          if (req.status == 200) {
+            var myArr = JSON.parse(this.responseText);
+            return(materiaalmeestercheck(myArr));
               
-  //         } else if (req.status == 403) {
-  //             alert('Forbidden');
-  //         }
-  //     }
-  // }
+          } else if (req.status == 403) {
+              alert('Forbidden');
+          }
+      }
+  }
 
   req.send();
   return;
