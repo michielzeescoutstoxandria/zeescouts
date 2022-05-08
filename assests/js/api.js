@@ -3,6 +3,7 @@ var keycloak = new Keycloak();
 function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // return;
+      materiaalmeester()
   }).catch(function() {
       alert('failed to initialize');
   });
@@ -52,14 +53,14 @@ const materiaalmeester = function () {
   req.open('GET', url, true);
   req.setRequestHeader('Accept', 'application/json');
   req.setRequestHeader('mode', 'no-cors');
-    req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
+  req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
 
   req.onreadystatechange = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
             console.log("ok");
             var myArr = JSON.parse(this.responseText);
-            return(materiaalmeestercheck(myArr));
+            // return(materiaalmeestercheck(myArr));
               
           } else if (req.status == 403) {
               alert('Forbidden');
@@ -91,10 +92,10 @@ function login(){
   console.log(keycloak.sessionId);
 
   // if(keycloak.authenticated == true){
-    console.log(materiaalmeester());
-    if(materiaalmeester() == true){
-      window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
-    }
+    // console.log(materiaalmeester());
+    // if(materiaalmeester() == true){
+    //   window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
+    // }
     // } else {
     //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
     // }
