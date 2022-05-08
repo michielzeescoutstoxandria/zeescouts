@@ -92,7 +92,7 @@ function login(){
   console.log(keycloak.sessionId);
 
   // if(keycloak.authenticated == true){
-    console.log(materiaalmeester());
+    materiaalmeester();
     // if(materiaalmeester() == true){
     //   window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
     // }
