@@ -3,7 +3,7 @@ var keycloak = new Keycloak();
 function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // return;
-      materiaalmeester()
+      // materiaalmeester()
   }).catch(function() {
       alert('failed to initialize');
   });
