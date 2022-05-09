@@ -99,7 +99,7 @@ function materiaalmeestercheck(json) {
   return materiaalmeester;
 }
 
-function login(){
+async function login(){
   await materiaalmeester()
   console.log(keycloak);
   console.log(keycloak.authenticated);
