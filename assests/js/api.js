@@ -58,7 +58,7 @@ function hideloader() {
     document.getElementById('loading').style.display = 'none';
 }
 
-async function materiaalmeesterfunction() {
+function materiaalmeesterfunction() {
   keycloak.updateToken(10);
   // document.getElementById('username').innerText = keycloak.subject;
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
@@ -75,7 +75,7 @@ async function materiaalmeesterfunction() {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            return await materiaalmeestercheck(json);
+            materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
               alert('Forbidden');
@@ -87,7 +87,7 @@ async function materiaalmeesterfunction() {
   // return check;
   }
 
-async function materiaalmeestercheck(json) {
+const materiaalmeestercheck = function (json) {
   console.log("check")
   var functies = json.functies;
   var materiaalmeester = false;
@@ -104,6 +104,7 @@ async function login(){
   console.log(keycloak);
   console.log(keycloak.authenticated);
   console.log(keycloak.sessionId);
+  console.log(materiaalmeestercheck);
 
   // if(keycloak.authenticated == true){
     // materiaalmeester();
