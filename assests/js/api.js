@@ -16,7 +16,7 @@ async function materiaalmeester() {
   keycloak.init({onLoad: 'login-required'})
   .then(function() {
       // return;
-      await materiaalmeesterfunction()
+      materiaalmeesterfunction()
       // console.log(keycloak);
   })
   .catch(function() {
