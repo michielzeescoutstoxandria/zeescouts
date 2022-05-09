@@ -69,18 +69,18 @@ function materiaalmeesterfunction() {
   req.setRequestHeader('mode', 'no-cors');
   req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
 
-  req.onreadystatechange = function () {
+  return req.onreadystatechange = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            console.warn(materiaalmeestercheck(json));
+            return materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
               alert('Forbidden');
           }
       }
-  }
+  };
 
   req.send();
   // return check;
