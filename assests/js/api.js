@@ -60,7 +60,7 @@ const materiaalmeester = function () {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            var check = materiaalmeestercheck(json);
+            materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
               alert('Forbidden');
@@ -69,7 +69,7 @@ const materiaalmeester = function () {
   }
 
   req.send();
-  return check;
+  // return check;
   }
 
 function materiaalmeestercheck(json) {
