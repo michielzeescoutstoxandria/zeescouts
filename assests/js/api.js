@@ -59,9 +59,9 @@ const materiaalmeester = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
             console.log("ok");
-            var myArr = JSON.parse(this.responseText);
-            return(materiaalmeestercheck(myArr));
-              
+            var json = JSON.parse(this.responseText);
+            var check = materiaalmeestercheck(json);
+             
           } else if (req.status == 403) {
               alert('Forbidden');
           }
@@ -69,6 +69,7 @@ const materiaalmeester = function () {
   }
 
   req.send();
+  return check;
   }
 
 function materiaalmeestercheck(json) {
