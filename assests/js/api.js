@@ -12,11 +12,11 @@ function initKeycloak() {
   });
 }
 
-function materiaalmeester() {
+async function materiaalmeester() {
   keycloak.init({onLoad: 'login-required'})
   .then(function() {
       // return;
-      materiaalmeesterfunction()
+      await materiaalmeesterfunction()
       // console.log(keycloak);
   })
   .catch(function() {
@@ -58,7 +58,7 @@ function hideloader() {
     document.getElementById('loading').style.display = 'none';
 }
 
-const materiaalmeesterfunction = function () {
+const materiaalmeesterfunction = async function () {
   keycloak.updateToken(10);
   // document.getElementById('username').innerText = keycloak.subject;
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
@@ -75,7 +75,7 @@ const materiaalmeesterfunction = function () {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            console.log(materiaalmeestercheck(json));
+            return await materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
               alert('Forbidden');
@@ -87,7 +87,7 @@ const materiaalmeesterfunction = function () {
   // return check;
   }
 
-function materiaalmeestercheck(json) {
+async function materiaalmeestercheck(json) {
   console.log("check")
   var functies = json.functies;
   var materiaalmeester = false;
