@@ -1,9 +1,10 @@
 var keycloak = new Keycloak();
+var materiaalmeester = false;
 
 function login() {
   keycloak.init({onLoad: 'login-required'})
   .then(function() {
-    console.warn(materiaalmeesterfunction());
+    materiaalmeesterfunction();
   })
   .catch(function() {
       alert('failed to initialize');
@@ -69,18 +70,18 @@ function materiaalmeesterfunction() {
   req.setRequestHeader('mode', 'no-cors');
   req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
 
-  return req.onreadystatechange = function () {
+  req.onreadystatechange = function () {
       if (req.readyState == 4) {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            return materiaalmeestercheck(json);
+            materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
               alert('Forbidden');
           }
       }
-  };
+  }
 
   req.send();
   // return check;
@@ -92,15 +93,16 @@ function materiaalmeesterfunction() {
 const materiaalmeestercheck = function (json) {
   console.log("check")
   var functies = json.functies;
-  var materiaalmeester = false;
+  
   for (var i = 0; i < functies.length; i++){
     if(functies[i].omschrijving == "Materiaalmeester"){
       materiaalmeester = true;
     }
   }
-  return materiaalmeester;
+  // return materiaalmeester;
 }
 
+console.error(materiaalmeester);
 // function login(){
 //   materiaalmeester();
 //   console.log(keycloak);
