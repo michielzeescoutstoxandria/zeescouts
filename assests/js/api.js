@@ -3,7 +3,7 @@ var keycloak = new Keycloak();
 function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // return;
-      // materiaalmeester()
+      materiaalmeester()
   }).catch(function() {
       alert('failed to initialize');
   });
@@ -93,7 +93,7 @@ function login(){
   console.log(keycloak.sessionId);
 
   // if(keycloak.authenticated == true){
-    materiaalmeester();
+    // materiaalmeester();
     // if(materiaalmeester() == true){
     //   window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
     // }
