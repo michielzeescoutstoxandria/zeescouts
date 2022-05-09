@@ -100,7 +100,7 @@ function materiaalmeestercheck(json) {
 }
 
 function login(){
-  materiaalmeester()
+  await materiaalmeester()
   console.log(keycloak);
   console.log(keycloak.authenticated);
   console.log(keycloak.sessionId);
