@@ -69,8 +69,7 @@ const materiaalmeester = function () {
   }
 
   req.send();
-  return;
-}
+  }
 
 function materiaalmeestercheck(json) {
   console.log("check")
