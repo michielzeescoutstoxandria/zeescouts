@@ -4,6 +4,7 @@ function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
       // return;
       materiaalmeester()
+      console.log(keycloak);
   }).catch(function() {
       alert('failed to initialize');
   });
