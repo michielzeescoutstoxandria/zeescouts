@@ -100,11 +100,10 @@ function materiaalmeestercheck(json) {
 }
 
 function login(){
-  initKeycloak().then(function() {
+  materiaalmeester()
   console.log(keycloak);
   console.log(keycloak.authenticated);
   console.log(keycloak.sessionId);
-  })
 
   // if(keycloak.authenticated == true){
     // materiaalmeester();
