@@ -2,9 +2,9 @@ var keycloak = new Keycloak();
 
 function initKeycloak() {
   keycloak.init({onLoad: 'login-required'}).then(function() {
-      // return;
-      materiaalmeester()
-      console.log(keycloak);
+      return;
+      // materiaalmeester()
+      // console.log(keycloak);
   }).catch(function() {
       alert('failed to initialize');
   });
@@ -88,7 +88,7 @@ function materiaalmeestercheck(json) {
 }
 
 function login(){
-  initKeycloak();
+  console.log(initKeycloak());
   console.log(keycloak);
   console.log(keycloak.authenticated);
   console.log(keycloak.sessionId);
