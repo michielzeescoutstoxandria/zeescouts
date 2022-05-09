@@ -1,11 +1,13 @@
 var keycloak = new Keycloak();
 
 function initKeycloak() {
-  keycloak.init({onLoad: 'login-required'}).then(function() {
-      return;
-      // materiaalmeester()
-      // console.log(keycloak);
-  }).catch(function() {
+  keycloak.init({onLoad: 'login-required'})
+  // .then(function() {
+  //     return;
+  //     // materiaalmeester()
+  //     // console.log(keycloak);
+  // })
+  .catch(function() {
       alert('failed to initialize');
   });
 }
@@ -88,10 +90,11 @@ function materiaalmeestercheck(json) {
 }
 
 function login(){
-  console.log(initKeycloak());
+  initKeycloak().then(function() {
   console.log(keycloak);
   console.log(keycloak.authenticated);
   console.log(keycloak.sessionId);
+  })
 
   // if(keycloak.authenticated == true){
     // materiaalmeester();
