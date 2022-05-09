@@ -1,28 +1,26 @@
 var keycloak = new Keycloak();
 
-function initKeycloak() {
-  keycloak.init({onLoad: 'login-required'})
-  // .then(function() {
-  //     return;
-  //     // materiaalmeester()
-  //     // console.log(keycloak);
-  // })
-  .catch(function() {
-      alert('failed to initialize');
-  });
-}
-
-async function materiaalmeester() {
+function login() {
   keycloak.init({onLoad: 'login-required'})
   .then(function() {
-      // return;
-      materiaalmeesterfunction()
-      // console.log(keycloak);
+    console.warn(materiaalmeesterfunction());
   })
   .catch(function() {
       alert('failed to initialize');
   });
 }
+
+// async function materiaalmeester() {
+//   keycloak.init({onLoad: 'login-required'})
+//   .then(function() {
+//       // return;
+//       materiaalmeesterfunction()
+//       // console.log(keycloak);
+//   })
+//   .catch(function() {
+//       alert('failed to initialize');
+//   });
+// }
 
 const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";
 
@@ -75,7 +73,7 @@ function materiaalmeesterfunction() {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            materiaalmeestercheck(json);
+            return materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
               alert('Forbidden');
@@ -99,20 +97,20 @@ const materiaalmeestercheck = function (json) {
   return materiaalmeester;
 }
 
-async function login(){
-  await materiaalmeester();
-  console.log(keycloak);
-  console.log(keycloak.authenticated);
-  console.log(keycloak.sessionId);
-  console.log(materiaalmeestercheck);
+// function login(){
+//   materiaalmeester();
+//   console.log(keycloak);
+//   console.log(keycloak.authenticated);
+//   console.log(keycloak.sessionId);
+//   console.log(materiaalmeestercheck);
 
-  // if(keycloak.authenticated == true){
-    // materiaalmeester();
-    // if(materiaalmeester() == true){
-    //   window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
-    // }
-    // } else {
-    //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
-    // }
-  // }  
-}
+//   // if(keycloak.authenticated == true){
+//     // materiaalmeester();
+//     // if(materiaalmeester() == true){
+//     //   window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
+//     // }
+//     // } else {
+//     //   window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
+//     // }
+//   // }  
+// }
