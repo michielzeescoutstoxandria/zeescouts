@@ -97,12 +97,17 @@ const materiaalmeestercheck = function (json) {
   for (var i = 0; i < functies.length; i++){
     if(functies[i].omschrijving == "Materiaalmeester"){
       materiaalmeester = true;
+      redirect();
     }
   }
   // return materiaalmeester;
 }
 
-console.error(materiaalmeester);
+function redirect(){
+  console.error(materiaalmeester);
+}
+
+
 // function login(){
 //   materiaalmeester();
 //   console.log(keycloak);
