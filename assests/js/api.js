@@ -57,7 +57,8 @@ function hideloader() {
 }
 
 function materiaalmeesterfunction() {
-  keycloak.updateToken(10);
+  keycloak.updateToken(10)
+  .then(function() {
   // document.getElementById('username').innerText = keycloak.subject;
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
   console.log("materiaal ok");
@@ -83,6 +84,9 @@ function materiaalmeesterfunction() {
 
   req.send();
   // return check;
+}).catch(function() {
+  alert('Failed to refresh token');
+});
   }
 
 const materiaalmeestercheck = function (json) {
