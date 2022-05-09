@@ -73,7 +73,7 @@ function materiaalmeesterfunction() {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            return materiaalmeestercheck(json);
+            reconsole.warn(materiaalmeestercheck(json));
              
           } else if (req.status == 403) {
               alert('Forbidden');
