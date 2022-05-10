@@ -109,7 +109,6 @@ function redirect(){
 //     // materiaalmeester();
     if(materiaalmeester() == true){
       window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
-    }
     } else {
       window.location.replace("https://zeescoutstoxandria.netlify.app/leiding.html");
     }
