@@ -3,3 +3,9 @@ GET https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/prof
 ###
 
 GET https://login.scoutsengidsenvlaanderen.be/auth/
+
+
+###
+
+
+GET https://zeescoutstoxandria.netlify.app
