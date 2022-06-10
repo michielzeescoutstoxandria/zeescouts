@@ -100,7 +100,7 @@ const materiaalmeestercheck = function (json) {
       materiaalmeester = true;
     }
   }
-  redirect();
+  //redirect();
 }
 
 function redirect(){
