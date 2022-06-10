@@ -60,6 +60,7 @@ function hideloader() {
 function materiaalmeesterfunction() {
   keycloak.updateToken(10)
   .then(function() {
+    console.log(keycloack);
   // document.getElementById('username').innerText = keycloak.subject;
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
   console.log("materiaal ok");
