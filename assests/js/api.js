@@ -92,7 +92,7 @@ function materiaalmeesterfunction() {
 
 const materiaalmeestercheck = function (json) {
   console.log("check");
-  console.log(keycloack);
+  console.log(keycloak);
   var functies = json.functies;
   
   for (var i = 0; i < functies.length; i++){
