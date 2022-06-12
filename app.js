@@ -33,7 +33,7 @@ file.addEventListener('change', function(){
             img.setAttribute('src', reader.result);
         });
 
-        reader.readAsDataURL(choosedFile);
+        // reader.readAsDataURL(choosedFile);
         console.log( reader.readAsDataURL(choosedFile));
 
         //Allright is done
