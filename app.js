@@ -34,6 +34,7 @@ file.addEventListener('change', function(){
         });
 
         reader.readAsDataURL(choosedFile);
+        console.log( reader.readAsDataURL(choosedFile));
 
         //Allright is done
 
