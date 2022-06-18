@@ -3,11 +3,11 @@
 $servername = "localhost";
 
 // REPLACE with your Database name
-$dbname = "laptops";
+$dbname = "id19089917_zeescoutsapp";
 // REPLACE with Database user
-$username = "ubuntu";
+$username = "id19089917_zeescouts";
 // REPLACE with Database user password
-$password = "Patje123";
+$password = "Azertyui1234/";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,24 +16,22 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM kaarten";
+$sql = "SELECT * FROM boten";
 
 if ($result = $conn->query($sql)) {
     $arr = [];
     $inc = 0;
     while ($row = $result->fetch_assoc()) {
-        $row_uid = $row["UID"];
-        $row_rnummer = $row["rnummer"];
-		$row_voornaam = $row["voornaam"];
-        $row_achternaam = $row["achternaam"];
+        $row_naam = $row["naam"];
+        $row_type = $row["type"];
+		$row_img = $row["img"];
 	
 
 		
 	$data = array(
-		'uid' => $row_uid,
-		'rnummer' => $row_rnummer, 
-		'voornaam' => $row_voornaam, 
-		'achternaam' => $row_achternaam
+		'naam' => $row_naam,
+		'type' => $row_type, 
+		'img' => $row_img
 			     );
     $arr[$inc] = $data;
     $inc++;
