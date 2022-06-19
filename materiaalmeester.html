@@ -43,8 +43,6 @@
     <button onclick="boten()"></button>
     <script>
         var objXMLHttpRequest = new XMLHttpRequest();
-        objXMLHttpRequest.setRequestHeader('Access-Control-Allow-Headers', 'origin, x-requested-with, content-type');
-        objXMLHttpRequest.setRequestHeader('Access-Control-Allow-Methods', 'GET');
         objXMLHttpRequest.onreadystatechange = function() {
           if(objXMLHttpRequest.readyState === 4) {
             if(objXMLHttpRequest.status === 200) {
@@ -56,6 +54,8 @@
           }
         }
         objXMLHttpRequest.open('GET', 'https://zeescouts.000webhostapp.com/getboten.php');
+        objXMLHttpRequest.setRequestHeader('Access-Control-Allow-Headers', 'origin, x-requested-with, content-type');
+        objXMLHttpRequest.setRequestHeader('Access-Control-Allow-Methods', 'GET');
         objXMLHttpRequest.send();
         </script>
   </body>
