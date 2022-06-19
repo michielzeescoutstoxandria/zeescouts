@@ -4,6 +4,7 @@ function boten() {
   
     const req = new XMLHttpRequest();
     req.open('GET', url, true);
+    req.setRequestHeader('origin', url);
     console.log(req);
   
     req.onreadystatechange = function () {
