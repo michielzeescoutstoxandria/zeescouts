@@ -3,9 +3,8 @@ function boten() {
     const url = 'https://zeescouts.000webhostapp.com/getboten.php';
   
     const req = new XMLHttpRequest();
-    req.open('GET', url, true);
+    req.open('GET', url);
     req.setRequestHeader('Accept', 'application/json');
-    req.setRequestHeader('mode', 'no-cors');
     console.log(req);
   
     req.onreadystatechange = function () {
