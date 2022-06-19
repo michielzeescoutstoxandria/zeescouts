@@ -1,6 +1,6 @@
 function boten() {
     console.log('start');
-    const url = 'http://mullmull.epizy.com/getboten.php';
+    const url = 'https://mullmull.epizy.com/getboten.php';
   
     const req = new XMLHttpRequest();
     req.open('GET', url, true);
