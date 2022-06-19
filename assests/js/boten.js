@@ -4,7 +4,6 @@ function boten() {
   
     const req = new XMLHttpRequest();
     req.open('GET', url, true);
-    req.setRequestHeader('Access-Control-Allow-Origin', url);
     console.log(req);
   
     req.onreadystatechange = function () {
