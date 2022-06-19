@@ -1,11 +1,10 @@
 function boten() {
     console.log('start');
-    const url = 'https://mullmull.epizy.com/getboten.php';
+    const url = 'https://zeescouts.000webhostapp.com/getboten.php';
   
     const req = new XMLHttpRequest();
     req.open('GET', url, true);
     req.setRequestHeader('mode', 'no-cors');
-    req.setRequestHeader('Content-Length', '564');
     console.log(req);
   
     req.onreadystatechange = function () {
