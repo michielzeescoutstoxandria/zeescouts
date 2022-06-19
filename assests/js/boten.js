@@ -1,6 +1,6 @@
 function boten() {
     console.log('start');
-    const url = 'http://zeescouts.000webhostapp.com/getboten.php';
+    const url = 'https://zeescouts.000webhostapp.com/getboten.php';
   
     const req = new XMLHttpRequest();
     req.open('GET', url, true);
