@@ -43,6 +43,8 @@
     <button onclick="boten()"></button>
     <script>
         var objXMLHttpRequest = new XMLHttpRequest();
+        objXMLHttpRequest.setRequestHeader('Access-Control-Allow-Headers', 'origin, x-requested-with, content-type');
+        eq.setRequestHeader('Access-Control-Allow-Methods', 'GET');
         objXMLHttpRequest.onreadystatechange = function() {
           if(objXMLHttpRequest.readyState === 4) {
             if(objXMLHttpRequest.status === 200) {
