@@ -4,7 +4,6 @@ function boten() {
   
     const req = new XMLHttpRequest();
     req.open('GET', url, true);
-    req.setRequestHeader('mode', 'no-cors');
     console.log(req);
   
     req.onreadystatechange = function () {
