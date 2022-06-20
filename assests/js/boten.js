@@ -9,7 +9,7 @@ function boten() {
     req.onreadystatechange = function () {
         if (req.readyState == 4) {
             if (req.status == 200) {
-              var json = this.responseText;
+              var json = JSON.parse(this.responseText);
               console.log(json);
                
             } else if (req.status == 403) {
