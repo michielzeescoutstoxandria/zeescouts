@@ -54,8 +54,8 @@
           }
         }
         objXMLHttpRequest.open('GET', 'https://embed-dev-1.stuvm.be/kaarten.php');
-        objXMLHttpRequest.setRequestHeader('Access-Control-Allow-Headers', 'origin, x-requested-with, content-type');
-        objXMLHttpRequest.setRequestHeader('Access-Control-Allow-Methods', 'GET');
+        objXMLHttpRequest.setRequestHeader('Accept', 'application/json');
+        objXMLHttpRequest.setRequestHeader('mode', 'no-cors');
         objXMLHttpRequest.send();
         </script>
   </body>
