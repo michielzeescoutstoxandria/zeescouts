@@ -75,6 +75,7 @@ function materiaalmeesterfunction() {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
+            alert(json);
             materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
