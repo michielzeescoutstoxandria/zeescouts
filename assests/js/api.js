@@ -61,7 +61,7 @@ function materiaalmeesterfunction() {
   keycloak.updateToken(10)
   .then(function() {
   // document.getElementById('username').innerText = keycloak.subject;
-  const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
+  const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie';
   console.log("materiaal ok");
 
   const req = new XMLHttpRequest();
