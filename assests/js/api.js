@@ -61,9 +61,8 @@ function materiaalmeesterfunction() {
   keycloak.updateToken(10)
   .then(function() {
   // document.getElementById('username').innerText = keycloak.subject;
-  const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie';
+  const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/lid/profiel';
   console.log("materiaal ok");
-  console.log(keycloak.token);
 
   const req = new XMLHttpRequest();
   req.open('GET', url, true);
@@ -76,7 +75,7 @@ function materiaalmeesterfunction() {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            // materiaalmeestercheck(json);
+            materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
               alert('Forbidden');
@@ -97,7 +96,7 @@ const materiaalmeestercheck = function (json) {
   var functies = json.functies;
   
   for (var i = 0; i < functies.length; i++){
-    if(functies[i].omschrijving == "Materiaalmeester"){
+    if(functies[i].omschrijving == "Materiaalmeester" || functies[i].omschrijving == "Adjunct Materiaalmeester"){
       materiaalmeester = true;
     }
   }
