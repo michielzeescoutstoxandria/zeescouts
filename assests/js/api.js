@@ -63,6 +63,7 @@ function materiaalmeesterfunction() {
   // document.getElementById('username').innerText = keycloak.subject;
   const url = 'https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie';
   console.log("materiaal ok");
+  alert(keycloak.token);
 
   const req = new XMLHttpRequest();
   req.open('GET', url, true);
@@ -75,7 +76,6 @@ function materiaalmeesterfunction() {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            alert(json);
             materiaalmeestercheck(json);
              
           } else if (req.status == 403) {
