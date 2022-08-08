@@ -11,7 +11,7 @@ ssCountdownDefaultOptions.daysColor 	= 	"#f9b401";
  * */
 
 /*Date Format: YYYY-MM-DD*/
-ssCountdownDefaultOptions.date 		= 	"2018-8-30";	
+ssCountdownDefaultOptions.date 		= 	"2022-8-09";	
 
 /*Time Format: hh:mm:ss*/
 ssCountdownDefaultOptions.time 		= 	"2:19:30";		
