@@ -34,7 +34,7 @@ function loadboten() {
             if (req.status == 200) {
                 var json = JSON.parse(this.responseText);
                 console.log(json);
-                var boten = json.boten;
+                var boten = json;
                 var botenlijst = document.getElementById('botenlijst');
                 for (var i = 0; i < boten.length; i++) {
                     var botenitem = document.createElement('li');
