@@ -11,7 +11,7 @@ function boten() {
             if (req.status == 200) {
                 var json = JSON.parse(this.responseText);
                 console.log(json);
-                return(json.boten);
+                return(json);
 
             } else if (req.status == 403) {
                 alert('Forbidden');
