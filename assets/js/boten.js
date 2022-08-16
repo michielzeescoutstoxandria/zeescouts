@@ -1,25 +1,25 @@
-function boten() {
-    console.log('start');
-    const url = 'https://zeescouts.000webhostapp.com/getboten.php';
+// function boten() {
+//     console.log('start');
+//     const url = 'https://zeescouts.000webhostapp.com/getboten.php';
 
-    const req = new XMLHttpRequest();
-    req.open('GET', url, true);
-    console.log(req);
+//     const req = new XMLHttpRequest();
+//     req.open('GET', url, true);
+//     console.log(req);
 
-    req.onreadystatechange = function () {
-        if (req.readyState == 4) {
-            if (req.status == 200) {
-                var json = JSON.parse(this.responseText);
-                console.log(json);
-                return(json);
+//     req.onreadystatechange = function () {
+//         if (req.readyState == 4) {
+//             if (req.status == 200) {
+//                 var json = JSON.parse(this.responseText);
+//                 console.log(json);
+//                 return(json);
 
-            } else if (req.status == 403) {
-                alert('Forbidden');
-            }
-        }
-    }
-    req.send();
-}
+//             } else if (req.status == 403) {
+//                 alert('Forbidden');
+//             }
+//         }
+//     }
+//     req.send();
+// }
 
 function loadboten() {
     console.log('start');
