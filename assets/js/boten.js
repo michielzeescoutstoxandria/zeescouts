@@ -51,9 +51,9 @@ function loadboten() {
 
 function loadcards() { 
     loadboten();
-    for (var i = 0; i < boten.length; i++) {
-        var botenitem = document.createElement('li');
-        botenitem.innerHTML = boten[i].naam;
-        botenlijst.appendChild(botenitem);
-    }
+    // for (var i = 0; i < boten.length; i++) {
+    //     var botenitem = document.createElement('li');
+    //     botenitem.innerHTML = boten[i].naam;
+    //     botenlijst.appendChild(botenitem);
+    // }
 }
