@@ -47,6 +47,30 @@
             </div>
         </main>
     </div>
+    <h2 id="yachts" class="mt-0">Our Yachts</h2>
+<div class="card-group">
+    {{ $pages := sort (where $.Site.RegularPages "Section" "boats") "Weight" "asc" }}
+    {{ range $pages }}
+        <div class="card">
+            <img src="{{ .RelPermalink | safeCSS }}{{ .Params.heroimage | safeCSS }}" class="card-img-top" alt="...">
+            <div class="card-body clearfix">
+                <h4 class="card-title">{{ .LinkTitle }}</h4>
+                <p class="card-text border-light border-top border-bottom">
+                    <span class="row">
+                        <span class="col-6 text-muted text-left">
+                            {{- partialCached "icons/users.svg" . -}}{{ .Params.pax }}
+                        </span>
+                        <span class="col-6 text-muted text-right">
+                            {{- partialCached "icons/bed.svg" . -}}{{ .Params.bunks }}
+                        </span>
+                    </span>
+                </p>                    
+                <p class="card-text">{{ .Description }}</p>
+                <a href="{{ .RelPermalink }}" class="card-link stretched-link btn btn-outline-dark float-right">Learn More</a>
+            </div>
+        </div>
+    {{ end }}
+</div>
 </body>
 
 </html>
