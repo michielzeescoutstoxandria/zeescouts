@@ -49,12 +49,10 @@
     </div>
     <h2 id="yachts" class="mt-0">Our Yachts</h2>
 <div class="card-group">
-    {{ $pages := sort (where $.Site.RegularPages "Section" "boats") "Weight" "asc" }}
-    {{ range $pages }}
         <div class="card">
-            <img src="{{ .RelPermalink | safeCSS }}{{ .Params.heroimage | safeCSS }}" class="card-img-top" alt="...">
+            <img src="" class="card-img-top" alt="...">
             <div class="card-body clearfix">
-                <h4 class="card-title">{{ .LinkTitle }}</h4>
+                <h4 class="card-title">Stormvogel</h4>
                 <p class="card-text border-light border-top border-bottom">
                     <span class="row">
                         <span class="col-6 text-muted text-left">
