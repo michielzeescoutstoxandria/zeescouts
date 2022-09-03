@@ -35,11 +35,15 @@ function loadboten() {
                 var json = JSON.parse(this.responseText);
                 console.log(json);
                 var boten = json;
-                var botenlijst = document.getElementById('botenlijst');
+                var botenlijst = document.getElementById('boot');
                 for (var i = 0; i < boten.length; i++) {
-                    var botenitem = document.createElement('li');
-                    botenitem.innerHTML = boten[i].naam;
-                    botenlijst.appendChild(botenitem);
+                    // var botenitem = document.createElement('li');
+                    // botenitem.innerHTML = boten[i].naam;
+                    // botenlijst.appendChild(botenitem);
+                    var botenitem = '<div class="card padding-10"><img src="https://drive.google.com/uc?export=view&id=' + boten[i].img_ID + '" class="card-img-top" width="20px"><div class="card-body clearfix"><h4 class="card-title">'+ boten[i].naam +'</h4><p class="card-text border-light border-top border-bottom"><span class="row"><span class="col-6 text-muted text-left"><a href="datasheets.html">datasheet</a></span><span class="col-6 text-muted text-right"><a href="aangifte.html">schade</a></span></span></p><p class="card-text">{{ .Description }}</p><a href="{{ .RelPermalink }}" class="card-link stretched-link btn btn-outline-dark float-right">Learn More</a></div></div>';
+                    botenlijst.innerHTML += botenitem;
+
+
                 }
             } else if (req.status == 403) {
                 alert('Forbidden');
