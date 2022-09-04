@@ -61,3 +61,4 @@ function loadcards() {
     //     botenlijst.appendChild(botenitem);
     // }
 }
+

@@ -1,54 +1,64 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .head {
-    /* The image used */
-    background-image: url("../img/279703968_10159429212000589_3796083311920730025_n.jpg");
-  
-    /* Full height */
-    height: 100%;
+  /* The image used */
+  background-image: url("../img/279703968_10159429212000589_3796083311920730025_n.jpg");
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Full height */
+  height: 100%;
 
-    opacity: 80%;
-  }
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  .nav{
-    padding: 0;
-    margin: 0;
-    height: 20px;
-  }
+  opacity: 80%;
+}
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+.nav {
+  padding: 0;
+  margin: 0;
+  height: 20px;
+}
 
-  li a:hover {
-    background-color: #111;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
-  .active {
-    background-color: #04AA6D;
-  }
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+
+#preloader {
+  background: #000;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
