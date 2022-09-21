@@ -114,7 +114,7 @@ function redirect(){
   }  
 }
 
-function logout(){
+function loginout(){
   keycloak.logout();
 }
 
