@@ -115,7 +115,7 @@ function redirect(){
 }
 
 function logout(){
-  keycloak.logout();
+  // keycloak.logout();
   window.location.replace("https://zeescoutstoxandria.netlify.app");
 }
 
