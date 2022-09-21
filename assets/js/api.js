@@ -114,6 +114,10 @@ function redirect(){
   }  
 }
 
+function logout(){
+  keycloak.logout();
+}
+
 
 // function login(){
 //   materiaalmeester();
