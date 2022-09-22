@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body,
 html {
   font-family: sans-serif;
@@ -341,10 +347,6 @@ fieldset:disabled a.btn {
 .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(32, 51, 84, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(32, 51, 84, 0.5);
-}
-
-.padding-10 {
-  padding: 10px;
 }
 
 @media (min-width: 576px) {
