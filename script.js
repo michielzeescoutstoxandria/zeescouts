@@ -45,3 +45,9 @@ function updateProgressbar() {
   progress.style.width =
     ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
+
+function playSound(url) {
+    // <button onclick="playSound('https://www.youtube.com/watch?v=Soa3gO7tL-c');">Play</button>
+    const audio = new Audio(url);
+    audio.play();
+  }
