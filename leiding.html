@@ -4,7 +4,7 @@
 <head>
     <script src="https://login.scoutsengidsenvlaanderen.be/auth/js/keycloak.js"></script>
     <script src="assets/js/api.js"></script>
-    
+
     <script src="assets/js/boten.js"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
 
@@ -17,32 +17,36 @@
 </head>
 
 <body>
-    <div class="headtest">
-        <div class="nav">
-            <ul>
-                <li><a class="active" href="#">Leiding</a></li>
-                <li style="float:right"><a href="logout.html">Logout</a></li>
-              </ul>
-        </div>
-    </div>
-
-
-    <div class="d-flex flex-column container bg-dark px-0 min-vh-100">
-        <main class="p-2 flex-grow-1">
-            <div class="row justify-content-center">
-                <!-- <div class="card-group"> -->
-                <script>loadcards()</script> 
-                <div class="card-deck" id="boot">
+    <div id="page-container">
+        <div id="content-wrap">
+            <div class="headtest">
+                <div class="nav">
+                    <ul>
+                        <li><a class="active" href="#">Leiding</a></li>
+                        <li style="float:right"><a href="logout.html">Logout</a></li>
+                    </ul>
                 </div>
             </div>
-        </main>
+
+
+            <div class="d-flex flex-column container bg-dark px-0">
+                <main class="p-2 flex-grow-1">
+                    <div class="row justify-content-center">
+                        <!-- <div class="card-group"> -->
+                        <script>loadcards()</script>
+                        <div class="card-deck" id="boot">
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <footer id="footer">
+            <div>
+                <p>&copy ZEESCOUTS TOXANDRIA - Michiel Müller</p>
+            </div>
+        </footer>
     </div>
 </body>
-<footer>
-    <div>
-        <p>&copy ZEESCOUTS TOXANDRIA - Michiel Müller</p>
-    </div>
-</footer>
 
 </html>
 

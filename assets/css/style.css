@@ -17,6 +17,22 @@ html {
   padding: 0;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -59,8 +75,9 @@ p {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  /* vertical scrol bar */
+  /* margin-right: -15px;
+  margin-left: -15px; */
 }
 
 .justify-content-center {
@@ -233,10 +250,12 @@ p {
 
 .text-left {
   text-align: left !important;
+  padding: 0;
 }
 
 .text-right {
   text-align: right !important;
+  padding: 0;
 }
 
 .float-left {
@@ -251,6 +270,7 @@ a {
   color: #009cab;
   text-decoration: none;
   background-color: transparent;
+
 }
 a:hover {
   color: #00565f;
@@ -330,8 +350,8 @@ fieldset:disabled a.btn {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    /* margin-right: -15px;
+    margin-left: -15px; */
     justify-content: center;
   }
   .card-deck .card {
@@ -411,6 +431,7 @@ footer{
 
 footer p{
   /* padding: 10px; */
+  
   width: 100%;
   height: 2.5rem;
   padding: 0.7rem;
