@@ -23,7 +23,7 @@
 
 function loadboten() {
     console.log('start');
-    const url = 'https://mullmull.epizy.com/get.php';
+    const url = 'https://mullmull.epizy.com/getboten.php';
 
     const req = new XMLHttpRequest();
     req.open('GET', url, true);
