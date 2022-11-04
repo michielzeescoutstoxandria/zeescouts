@@ -23,7 +23,7 @@
 
 function loadboten() {
     console.log('start');
-    const url = 'https://zeescouts.000webhostapp.com/getboten.php';
+    const url = 'http://mullmull.epizy.com/get.php';
 
     const req = new XMLHttpRequest();
     req.open('GET', url, true);
