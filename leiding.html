@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <script src="https://login.scoutsengidsenvlaanderen.be/auth/js/keycloak.js"></script>
@@ -8,7 +8,7 @@
     <script src="assets/js/boten.js"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <!-- <link rel="stylesheet" href="assets/css/boot.css"> -->
+    <script src="schade.js" defer></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,13 +32,15 @@
             <div class="d-flex flex-column container px-0">
                 <main class="p-2 flex-grow-1">
                     <div class="row justify-content-center">
-                        <!-- <div class="card-group"> -->
                         <script>loadcards()</script>
                         <div class="card-deck" id="boot">
                         </div>
                     </div>
                 </main>
             </div>
+            <p>
+                <button class="button" data-modal="modalTwo">Send a Compliant Form</button>
+            </p>
         </div>
         <footer id="footer">
             <div>
@@ -46,43 +48,161 @@
             </div>
         </footer>
     </div>
+    <div class="schadeform" id="schadeform">
+        <form action="#" class="form">
+            <h1 class="text-center">schade formulier</h1>
+
+            <!-- Progress bar  -->
+            <div class="progressbar">
+                <div class="progress" id="progress"></div>
+
+                <div class="progress-step progress-step-active" data-title="gegevens"></div>
+                <div class="progress-step" data-title="Beschrijving"></div>
+                <div class="progress-step" data-title="controle"></div>
+            </div>
+
+            <!-- Steps -->
+            <div class="form-step form-step-active">
+                <div class="input-group">
+                    <label for="bootnaam">Bootnaam</label>
+                    <input type="text" name="bootnaam" id="username" />
+                </div>
+                <div class="input-group">
+                    <label for="prioriteit">prioriteit</label>
+                    <select id="prioriteit" name="prioriteit">
+                        <option value="nietdringend">niet dringend</option>
+                        <option value="dringend">dringend</option>
+                        <option value="superdringend">super dringend</option>
+                    </select>
+                </div>
+                <div class="">
+                    <a href="javascript: void(0);" class="btn btn-next width-50 ml-auto">Next</a>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="phone">Beschrijving</label>
+                    <textarea name="phone" id="phone"></textarea>
+                </div>
+                <div class="btns-group">
+                    <a href="javascript: void(0);" class="btn btn-prev">Previous</a>
+                    <a href="javascript: void(0);" class="btn btn-next">Next</a>
+                </div>
+            </div>
+
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" name="dob" id="dob" />
+                </div>
+                <div class="input-group">
+                    <label for="ID">National ID</label>
+                    <input type="number" name="ID" id="ID" />
+                </div>
+                <div class="btns-group">
+                    <a href="javascript: void(0);" class="btn btn-prev">Previous</a>
+                    <input type="submit" value="Submit" class="btn" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- <div id="modalTwo" class="modal"> -->
+    <!-- <div class="modal-content"> -->
+    <!-- <div class="contact-form"> -->
+    <!-- <span class="close">&times;</span> -->
+    <!-- <div class="schadeform" id="schadeform">
+                    <form action="#" class="form">
+                        <h1 class="text-center">schade formulier</h1> -->
+    <!-- Progress bar -->
+
+    <!-- <div class="progressbar">
+                            <div class="progress" id="progress"></div>
+
+                            <div class="progress-step progress-step-active" data-title="gegevens"></div>
+                            <div class="progress-step" data-title="Beschrijving"></div>
+                            <div class="progress-step" data-title="controle"></div>
+                        </div> -->
+
+    <!-- Steps -->
+    <!-- <div class="form-step form-step-active">
+                            <div class="input-group">
+                                <label for="bootnaam">Bootnaam</label>
+                                <input type="text" name="bootnaam" id="username" />
+                            </div>
+                            <div class="input-group">
+                                <label for="prioriteit">prioriteit</label>
+                                <select id="prioriteit" name="prioriteit">
+                                    <option value="nietdringend">niet dringend</option>
+                                    <option value="dringend">dringend</option>
+                                    <option value="superdringend">super dringend</option>
+                                </select>
+                            </div>
+                            <div class="">
+                                <a href="javascript: void(0);" class="btn btn-next width-50 ml-auto">Next</a>
+                            </div>
+                        </div>
+
+                        <div class="form-step">
+                            <div class="input-group">
+                                <label for="phone">Beschrijving</label>
+                                <textarea name="phone" id="phone" rows="10" cols="50"></textarea>
+                            </div>
+                            <div class="btns-group">
+                                <a href="javascript: void(0);" class="btn btn-prev">Previous</a>
+                                <a href="javascript: void(0);" class="btn btn-next">Next</a>
+                            </div>
+                        </div>
+
+                        <div class="form-step">
+                            <div class="input-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" name="dob" id="dob" />
+                            </div>
+                            <div class="input-group">
+                                <label for="ID">National ID</label>
+                                <input type="number" name="ID" id="ID" />
+                            </div>
+                            <div class="btns-group">
+                                <a href="javascript: void(0);" class="btn btn-prev">Previous</a>
+                                <input type="submit" value="Submit" class="btn" />
+                            </div>
+                        </div>
+                    </form> -->
+    <!-- </div> -->
+    <!-- </div>-->
+    <!-- </div> 
+    </div> -->
+
+    <script>
+        let modalBtns = [...document.querySelectorAll(".button")];
+        modalBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                let modal = btn.getAttribute("data-modal");
+                document.getElementById(modal).style.display = "block";
+                // document.getElementsByID("schadeform").style.display = "block";
+            };
+        });
+        let closeBtns = [...document.querySelectorAll(".close")];
+        closeBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                let modal = btn.closest(".modal");
+                modal.style.display = "none";
+            };
+        });
+        window.onclick = function (event) {
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+            }
+        };
+
+        function openForm() {
+            document.getElementById("schadeform").style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
-
-
-<!-- <div class="card padding-10">
-    <img src="https://drive.google.com/uc?export=view&id=1-YfVH0eq2lwVyU3nWc9dOh_N9e1F2LXJ" class="card-img-top" width="20px">
-    <div class="card-body clearfix">
-        <h4 class="card-title">Stormvogel</h4>
-        <p class="card-text border-light border-top border-bottom">
-            <span class="row">
-                <span class="col-6 text-muted text-left">
-                    <a href="datasheets.html">datasheet</a>
-                </span>
-                <span class="col-6 text-muted text-right">
-                    <a href="aangifte.html">schade</a>
-                </span>
-            </span>
-        </p>                    
-        <p class="card-text">{{ .Description }}</p>
-        <a href="{{ .RelPermalink }}" class="card-link stretched-link btn btn-outline-dark float-right">Learn More</a>
-    </div>
-</div> -->
-
-<!-- <div class="card col-12 col-md-4 padding-10">
-    <img src='https://drive.google.com/uc?export=view&id=1-YfVH0eq2lwVyU3nWc9dOh_N9e1F2LXJ' class="card-img-top" width="40%">
-    <div class="card-body">
-        <h5 class="card-title">Stormvogel</h5>
-        <ul class="card-text list-group">
-            <li class="list-group-item">
-                <div class='l'>datasheet</div>
-            </li>
-            <li class="list-group-item">
-                <div class='l'>schade</div>
-            </li>
-            <script>loadcards()</script> 
-        </ul>
-        <ul id="botenlijst"></ul>
-    </div>
-</div> -->
