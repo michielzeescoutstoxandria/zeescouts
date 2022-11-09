@@ -8,8 +8,6 @@
     <script src="assets/js/boten.js"></script>
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <script src="assets/js/schade.js" defer></script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Materiaalmeesters toxandria</title>
@@ -32,15 +30,18 @@
             <div class="d-flex flex-column container px-0">
                 <main class="p-2 flex-grow-1">
                     <div class="row justify-content-center">
-                        <script>loadcards()</script>
                         <div class="card-deck" id="boot">
                         </div>
+                        <script>loadcards()</script>
                     </div>
                 </main>
             </div>
-            <p>
+            <!-- <p>
                 <button class="button" data-modal="modalTwo">Send a Compliant Form</button>
-            </p>
+                <a href="javascript: void(0);" class="btn btn-outline-dark schade" data-boot=' + boten[i].naam + ' style="background-color: white;">schade</a>
+            </p> -->
+
+            
         </div>
         <footer id="footer">
             <div>
@@ -48,8 +49,10 @@
             </div>
         </footer>
     </div>
+    
     <div class="schadeform" id="schadeform">
         <form action="#" class="form">
+            <span class="close">&times;</span>
             <h1 class="text-center">schade formulier</h1>
 
             <!-- Progress bar  -->
@@ -65,7 +68,9 @@
             <div class="form-step form-step-active">
                 <div class="input-group">
                     <label for="bootnaam">Bootnaam</label>
-                    <input type="text" name="bootnaam" id="username" />
+                    <select name="bootnaam" id="username">
+                        
+                    </select>
                 </div>
                 <div class="input-group">
                     <label for="prioriteit">prioriteit</label>
@@ -176,33 +181,7 @@
     <!-- </div>-->
     <!-- </div> 
     </div> -->
-
-    <script>
-        let modalBtns = [...document.querySelectorAll(".button")];
-        modalBtns.forEach(function (btn) {
-            btn.onclick = function () {
-                let modal = btn.getAttribute("data-modal");
-                document.getElementById(modal).style.display = "block";
-                // document.getElementsByID("schadeform").style.display = "block";
-            };
-        });
-        let closeBtns = [...document.querySelectorAll(".close")];
-        closeBtns.forEach(function (btn) {
-            btn.onclick = function () {
-                let modal = btn.closest(".modal");
-                modal.style.display = "none";
-            };
-        });
-        window.onclick = function (event) {
-            if (event.target.className === "modal") {
-                event.target.style.display = "none";
-            }
-        };
-
-        function openForm() {
-            document.getElementById("schadeform").style.display = "block";
-        }
-    </script>
+    <script src="assets/js/schade.js" defer></script>
 </body>
 
 </html>

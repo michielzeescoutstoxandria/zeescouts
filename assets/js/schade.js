@@ -4,6 +4,7 @@ const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
 const progressSteps = document.querySelectorAll(".progress-step");
 const textarea = document.querySelector("textarea");
+let closeBtn = document.querySelector(".close");
 
 
 let formStepsNum = 0;
@@ -54,8 +55,31 @@ textarea.addEventListener("keyup", e => {
   textarea.style.height = `${srcheight}px`;
 });
 
-function playSound(url) {
-    // <button onclick="playSound('https://www.youtube.com/watch?v=Soa3gO7tL-c');">Play</button>
-    const audio = new Audio(url);
-    audio.play();
+
+
+
+function schadeBtn(Btn){
+  document.getElementById("schadeform").style.display = "flex";
+  let select = document.getElementById('username');
+  select.value = Btn.getAttribute("data-boot");
+}
+
+  closeBtn.onclick = function () {
+    // let modal = btn.closest(".modal");
+    // modal.style.display = "none";
+    document.getElementById("schadeform").style.display = "none";
+  };
+
+
+window.onclick = function (event) {
+  if (event.target.className === "schadeform") {
+    event.target.style.display = "none";
   }
+};
+
+
+function playSound(url) {
+  // <button onclick="playSound('https://www.youtube.com/watch?v=Soa3gO7tL-c');">Play</button>
+  const audio = new Audio(url);
+  audio.play();
+}

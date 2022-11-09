@@ -23,6 +23,7 @@ if ($result = $conn->query($sql)) {
     $arr = [];
     $inc = 0;
     while ($row = $result->fetch_assoc()) {
+        $row_id = $row["ID"];
         $row_naam = $row["naam"];
         $row_type = $row["type"];
 		$row_img_id = $row["img_ID"];
@@ -34,6 +35,7 @@ if ($result = $conn->query($sql)) {
 
 		
         $data = array(
+            'id' => $row_id,
             'naam' => $row_naam,
             'type' => $row_type, 
             'img_ID' => $row_img_id,
