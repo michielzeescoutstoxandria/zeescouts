@@ -1,5 +1,5 @@
 var keycloak = new Keycloak();
-var materiaalmeester = false;
+let materiaalmeester = false;
 
 function login() {
   keycloak.init({ onLoad: 'login-required' })
