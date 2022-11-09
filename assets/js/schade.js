@@ -5,6 +5,12 @@ const formSteps = document.querySelectorAll(".form-step");
 const progressSteps = document.querySelectorAll(".progress-step");
 const textarea = document.querySelector("textarea");
 let closeBtn = document.querySelector(".close");
+let bootnaam = document.getElementById("bootnaam");
+let c_bootnaam = document.getElementById("c_bootnaam");
+let prioriteit = document.getElementById("prioriteit");
+let c_prioriteit = document.getElementById("c_prioriteit");
+let desc = document.getElementById("desc");
+let c_desc = document.getElementById("c_desc");
 
 
 let formStepsNum = 0;
@@ -55,25 +61,45 @@ textarea.addEventListener("keyup", e => {
   textarea.style.height = `${srcheight}px`;
 });
 
+bootnaam.addEventListener("change", () => {
+  c_bootnaam.value = bootnaam.value;
+});
 
+prioriteit.addEventListener("change", () => {
+  c_prioriteit.value = prioriteit.value;
+});
 
+desc.addEventListener("change", () => {
+  c_desc.value = desc.value;
+});
 
 function schadeBtn(Btn){
   document.getElementById("schadeform").style.display = "flex";
-  let select = document.getElementById('username');
-  select.value = Btn.getAttribute("data-boot");
+  let select = document.getElementById('bootnaam');
+  select.value = Btn.getAttribute("data-bootnaam");
+  c_bootnaam.value = Btn.getAttribute("data-bootnaam");
 }
 
   closeBtn.onclick = function () {
     // let modal = btn.closest(".modal");
     // modal.style.display = "none";
     document.getElementById("schadeform").style.display = "none";
+    formStepsNum = 0;
+    c_prioriteit.value = prioriteit.value = "niet dringend";
+    c_desc.value = desc.value = "";
+    updateFormSteps();
+    updateProgressbar();
   };
 
 
 window.onclick = function (event) {
   if (event.target.className === "schadeform") {
     event.target.style.display = "none";
+    formStepsNum = 0;
+    c_prioriteit.value = prioriteit.value = "niet dringend";
+    c_desc.value = desc.value = "";
+    updateFormSteps();
+    updateProgressbar();
   }
 };
 

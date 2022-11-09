@@ -38,12 +38,12 @@ function loadboten() {
                 // var botenitem = document.createElement('li');
                 // botenitem.innerHTML = boten[i].naam;
                 // botenlijst.appendChild(botenitem);
-                var botenitem = '<div class="card"><img src="https://drive.google.com/uc?export=view&id=' + boten[i].img_ID + '" class="card-img-top" width="20px"><div class="card-body clearfix"><h4 class="card-title">' + boten[i].naam + '</h4><p class="card-text border-light border-top border-bottom"><span class="row"><span class="col-6 text-muted text-left"><a href="' + boten[i].datasheet + '" class="btn btn-outline-dark float-left">Datasheet</a></span><span class="col-6 text-muted text-right"><a href="javascript: void(0);" class="btn btn-outline-dark float-right schade" onclick="schadeBtn(this)" data-boot=' + boten[i].id + '>schade</a></span></span></p><p class="card-text">' + boten[i].description + '</p></div></div>';
+                var botenitem = '<div class="card"><img src="https://drive.google.com/uc?export=view&id=' + boten[i].img_ID + '" class="card-img-top" width="20px"><div class="card-body clearfix"><h4 class="card-title">' + boten[i].naam + '</h4><p class="card-text border-light border-top border-bottom"><span class="row"><span class="col-6 text-muted text-left"><a href="' + boten[i].datasheet + '" class="btn btn-outline-dark float-left">Datasheet</a></span><span class="col-6 text-muted text-right"><a href="javascript: void(0);" class="btn btn-outline-dark float-right schade" onclick="schadeBtn(this)" data-boot=' + boten[i].id + ' data-bootnaam="' + boten[i].naam + '">schade</a></span></span></p><p class="card-text">' + boten[i].description + '</p></div></div>';
                 botenlijst.innerHTML += botenitem;
 
-                select = document.getElementById('username');
+                select = document.getElementById('bootnaam');
                 var opt = document.createElement('option');
-                opt.value = boten[i].id;
+                opt.value = boten[i].naam;
                 opt.innerHTML = boten[i].naam;
                 select.appendChild(opt);
 

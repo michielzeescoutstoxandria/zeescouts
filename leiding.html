@@ -68,16 +68,16 @@
             <div class="form-step form-step-active">
                 <div class="input-group">
                     <label for="bootnaam">Bootnaam</label>
-                    <select name="bootnaam" id="username">
-                        
+                    <select name="bootnaam" id="bootnaam">
+
                     </select>
                 </div>
                 <div class="input-group">
                     <label for="prioriteit">prioriteit</label>
                     <select id="prioriteit" name="prioriteit">
-                        <option value="nietdringend">niet dringend</option>
+                        <option value="niet dringend">niet dringend</option>
                         <option value="dringend">dringend</option>
-                        <option value="superdringend">super dringend</option>
+                        <option value="super dringend">super dringend</option>
                     </select>
                 </div>
                 <div class="">
@@ -87,8 +87,8 @@
 
             <div class="form-step">
                 <div class="input-group">
-                    <label for="phone">Beschrijving schade</label>
-                    <textarea name="phone" id="phone"></textarea>
+                    <label for="desc">Beschrijving schade</label>
+                    <textarea name="desc" id="desc"></textarea>
                 </div>
                 <div class="btns-group">
                     <a href="javascript: void(0);" class="btn btn-prev">Previous</a>
@@ -98,12 +98,16 @@
 
             <div class="form-step">
                 <div class="input-group">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" name="dob" id="dob" />
+                    <label>bootnaam</label>
+                    <input type="text" id="c_bootnaam" disabled />
                 </div>
                 <div class="input-group">
-                    <label for="ID">National ID</label>
-                    <input type="number" name="ID" id="ID" />
+                    <label for="ID">prioriteit</label>
+                    <input type="text" name="ID" id="c_prioriteit" disabled value="niet dringend" />
+                </div>
+                <div class="input-group">
+                    <label>Beschrijving</label>
+                    <textarea id="c_desc" disabled></textarea>
                 </div>
                 <div class="btns-group">
                     <a href="javascript: void(0);" class="btn btn-prev">Previous</a>
