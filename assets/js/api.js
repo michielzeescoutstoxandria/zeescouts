@@ -93,10 +93,7 @@ function materiaalmeesterfunction() {
 }
 
 function materiaalmeestercheck() {
-  console.log("check");
-  console.log(keycloak);
   var functies = json.functies;
-
   for (var i = 0; i < functies.length; i++) {
     if (functies[i].omschrijving == "Materiaalmeester" || functies[i].omschrijving == "Adjunct Materiaalmeester") {
       return true;
