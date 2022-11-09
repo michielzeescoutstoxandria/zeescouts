@@ -383,6 +383,30 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(32, 51, 84, 0.5);
 }
 
+.kleurdiv{
+  position: relative;
+  
+}
+
+.kleur1 {
+  width: 1rem;
+  height: 1.5rem;
+  display: flex;
+  position: absolute;
+  right: 0.95rem;
+  top: -36px;
+  border: #000 solid 1px;
+}
+.kleur2 {
+  width: 1rem;
+  height: 1.5rem;
+  display: flex;
+  position: absolute;
+  right: 0px;
+  top: -36px;
+  border: #000 solid 1px;
+}
+
 @media (min-width: 576px) {
 
   /* .container-sm, .container {
@@ -525,8 +549,6 @@ li a:hover {
   z-index: 100;
 }
 
-
-
 .schadeform {
   font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -552,19 +574,21 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input, textarea {
+input,
+textarea {
   display: block;
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
 }
-textarea{
-  resize:none;
+
+textarea {
+  resize: none;
   max-height: 330px;
 }
 
-textarea::-webkit-scrollbar{
+textarea::-webkit-scrollbar {
   display: none;
 }
 
@@ -703,7 +727,7 @@ select {
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
 }
 
-.close{
+.close {
   font-family: serif;
   width: 30px;
   height: 30px;
@@ -725,7 +749,7 @@ select {
   z-index: 22;
 }
 
-.close:hover{
+.close:hover {
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
 }
 
