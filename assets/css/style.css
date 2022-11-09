@@ -407,6 +407,11 @@ fieldset:disabled a.btn {
   border: #000 solid 1px;
 }
 
+.kapot{
+  border: 4px solid rgb(255, 0, 0);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 @media (min-width: 576px) {
 
   /* .container-sm, .container {

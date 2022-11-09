@@ -39,8 +39,8 @@ function loadboten() {
                 // botenitem.innerHTML = boten[i].naam;
                 // botenlijst.appendChild(botenitem);
                 var botenitem = `
-                    <div class="card"><img src="https://drive.google.com/uc?export=view&id=${boten[i].img_ID}" class="card-img-top"
-                            width="20px">
+                    <div class="card" id="card${i}">
+                        <img src="https://drive.google.com/uc?export=view&id=${boten[i].img_ID}" class="card-img-top" width="20px">
                         <div class="card-body clearfix">
                             <h4 class="card-title">${boten[i].naam}</h4>
                             <div class="kleurdiv" id="kleurdiv${i}">
@@ -78,6 +78,11 @@ function loadboten() {
                     kleurdiv.innerHTML += kleuren;
                 }
 
+                if(boten[i].beschikbaar == 0){
+                    const card = document.getElementById(`card${i}`);
+                    card.classList.add("kapot");
+                }
+
             }
 
         })
@@ -96,8 +101,8 @@ function loadcards() {
     // }
     // var botenlijst = document.getElementById('boot');
     // var botenitem = `
-    //                 <div class="card"><img src="https://drive.google.com/uc?export=view&id=1-YfVH0eq2lwVyU3nWc9dOh_N9e1F2LXJ" class="card-img-top"
-    //                         width="20px">
+    //                 <div class="card kapot">
+    //                     <img src="https://drive.google.com/uc?export=view&id=1-YfVH0eq2lwVyU3nWc9dOh_N9e1F2LXJ" class="card-img-top" width="20px">
     //                     <div class="card-body clearfix">
     //                         <h4 class="card-title">stormvogel</h4>
     //                         <div class="kleurdiv">
