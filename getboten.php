@@ -1,11 +1,12 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 
 $servername = "localhost";
 
 // REPLACE with your Database name
-$dbname = "id19089917_zeescoutsapp";
+$dbname = "id19837666_boten";
 // REPLACE with Database user
-$username = "id19089917_zeescouts";
+$username = "id19837666_api";
 // REPLACE with Database user password
 $password = "Azertyui1234/";
 
