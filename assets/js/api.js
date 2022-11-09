@@ -1,5 +1,6 @@
 var keycloak = new Keycloak();
 let materiaalmeester = false;
+var json = null;
 
 function login() {
   keycloak.init({ onLoad: 'login-required' })
@@ -75,8 +76,8 @@ function materiaalmeesterfunction() {
         if (req.readyState == 4) {
           if (req.status == 200) {
             console.log("ok");
-            var json = JSON.parse(this.responseText);
-            materiaalmeestercheck(json);
+            json = JSON.parse(this.responseText);
+            redirect(json);
 
           } else if (req.status == 403) {
             alert('Forbidden');
@@ -91,21 +92,21 @@ function materiaalmeesterfunction() {
     });
 }
 
-const materiaalmeestercheck = function (json) {
+function materiaalmeestercheck() {
   console.log("check");
   console.log(keycloak);
   var functies = json.functies;
 
   for (var i = 0; i < functies.length; i++) {
     if (functies[i].omschrijving == "Materiaalmeester" || functies[i].omschrijving == "Adjunct Materiaalmeester") {
-      materiaalmeester = true;
+      return true;
     }
   }
-  redirect();
 }
 
 function redirect() {
   if (keycloak.authenticated == true) {
+    materiaalmeester = materiaalmeestercheck();
     console.log(materiaalmeester);
     if (materiaalmeester == true) {
       window.location.replace("https://zeescoutstoxandria.netlify.app/materiaalmeester.html");
