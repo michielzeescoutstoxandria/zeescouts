@@ -11,7 +11,7 @@ let prioriteit = document.getElementById("prioriteit");
 let c_prioriteit = document.getElementById("c_prioriteit");
 let desc = document.getElementById("desc");
 let c_desc = document.getElementById("c_desc");
-
+const id = "4LEtYMU4PL9yy";
 
 let formStepsNum = 0;
 
@@ -73,23 +73,23 @@ desc.addEventListener("change", () => {
   c_desc.value = desc.value;
 });
 
-function schadeBtn(Btn){
+function schadeBtn(Btn) {
   document.getElementById("schadeform").style.display = "flex";
   let select = document.getElementById('bootnaam');
   select.value = Btn.getAttribute("data-bootnaam");
   c_bootnaam.value = Btn.getAttribute("data-bootnaam");
 }
 
-  closeBtn.onclick = function () {
-    // let modal = btn.closest(".modal");
-    // modal.style.display = "none";
-    document.getElementById("schadeform").style.display = "none";
-    formStepsNum = 0;
-    c_prioriteit.value = prioriteit.value = "niet dringend";
-    c_desc.value = desc.value = "";
-    updateFormSteps();
-    updateProgressbar();
-  };
+closeBtn.onclick = function () {
+  // let modal = btn.closest(".modal");
+  // modal.style.display = "none";
+  document.getElementById("schadeform").style.display = "none";
+  formStepsNum = 0;
+  c_prioriteit.value = prioriteit.value = "niet dringend";
+  c_desc.value = desc.value = "";
+  updateFormSteps();
+  updateProgressbar();
+};
 
 
 window.onclick = function (event) {
@@ -103,6 +103,48 @@ window.onclick = function (event) {
   }
 };
 
+function sendData() {
+  if (desc.value == "") {
+    alert("beschrijving invullen");
+  } else {
+    // (A) GET FORM DATA
+    var data = new FormData();
+    data.append("id", id);
+    let element = document.getElementById("bootnaam");
+    data.append("bootid", element.options[element.selectedIndex].getAttribute("data-bootid"));
+    data.append("prior", document.getElementById("prioriteit").value);
+    data.append("desc", document.getElementById("desc").value);
+
+    // (B) INIT FETCH POST
+    fetch("https://apizee1.000webhostapp.com/postboten.php", {
+      method: "POST",
+      body: data
+    })
+
+      // (C) RETURN SERVER RESPONSE AS TEXT
+      .then((result) => {
+        if (result.status != 200) { throw new Error("Bad Server Response"); }
+        return result.text();
+      })
+
+      // (D) SERVER RESPONSE
+      .then((response) => {
+        console.log(response);
+        document.getElementById("schadeform").style.display = "none";
+        formStepsNum = 0;
+        c_prioriteit.value = prioriteit.value = "niet dringend";
+        c_desc.value = desc.value = "";
+        updateFormSteps();
+        updateProgressbar();
+      })
+
+      // (E) HANDLE ERRORS - OPTIONAL
+      .catch((error) => { console.log(error); });
+
+    // (F) PREVENT FORM SUBMIT
+    return false;
+  }
+}
 
 function playSound(url) {
   // <button onclick="playSound('https://www.youtube.com/watch?v=Soa3gO7tL-c');">Play</button>

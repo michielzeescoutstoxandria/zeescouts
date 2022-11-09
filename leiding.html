@@ -20,7 +20,7 @@
             <div class="headtest">
                 <div class="nav">
                     <ul>
-                        <li><a class="active" href="#">Leiding</a></li>
+                        <li><a class="active none" href="#">Leiding</a></li>
                         <li style="float:right"><a href="logout.html">Logout</a></li>
                     </ul>
                 </div>
@@ -36,10 +36,6 @@
                     </div>
                 </main>
             </div>
-            <!-- <p>
-                <button class="button" data-modal="modalTwo">Send a Compliant Form</button>
-                <a href="javascript: void(0);" class="btn btn-outline-dark schade" data-boot=' + boten[i].naam + ' style="background-color: white;">schade</a>
-            </p> -->
 
             
         </div>
@@ -51,7 +47,7 @@
     </div>
     
     <div class="schadeform" id="schadeform">
-        <form action="#" class="form">
+        <form onsubmit="return sendData()" class="form" action="javascript: void(0);">
             <span class="close">&times;</span>
             <h1 class="text-center">schade formulier</h1>
 
@@ -116,75 +112,6 @@
             </div>
         </form>
     </div>
-
-
-
-    <!-- <div id="modalTwo" class="modal"> -->
-    <!-- <div class="modal-content"> -->
-    <!-- <div class="contact-form"> -->
-    <!-- <span class="close">&times;</span> -->
-    <!-- <div class="schadeform" id="schadeform">
-                    <form action="#" class="form">
-                        <h1 class="text-center">schade formulier</h1> -->
-    <!-- Progress bar -->
-
-    <!-- <div class="progressbar">
-                            <div class="progress" id="progress"></div>
-
-                            <div class="progress-step progress-step-active" data-title="gegevens"></div>
-                            <div class="progress-step" data-title="Beschrijving"></div>
-                            <div class="progress-step" data-title="controle"></div>
-                        </div> -->
-
-    <!-- Steps -->
-    <!-- <div class="form-step form-step-active">
-                            <div class="input-group">
-                                <label for="bootnaam">Bootnaam</label>
-                                <input type="text" name="bootnaam" id="username" />
-                            </div>
-                            <div class="input-group">
-                                <label for="prioriteit">prioriteit</label>
-                                <select id="prioriteit" name="prioriteit">
-                                    <option value="nietdringend">niet dringend</option>
-                                    <option value="dringend">dringend</option>
-                                    <option value="superdringend">super dringend</option>
-                                </select>
-                            </div>
-                            <div class="">
-                                <a href="javascript: void(0);" class="btn btn-next width-50 ml-auto">Next</a>
-                            </div>
-                        </div>
-
-                        <div class="form-step">
-                            <div class="input-group">
-                                <label for="phone">Beschrijving</label>
-                                <textarea name="phone" id="phone" rows="10" cols="50"></textarea>
-                            </div>
-                            <div class="btns-group">
-                                <a href="javascript: void(0);" class="btn btn-prev">Previous</a>
-                                <a href="javascript: void(0);" class="btn btn-next">Next</a>
-                            </div>
-                        </div>
-
-                        <div class="form-step">
-                            <div class="input-group">
-                                <label for="dob">Date of Birth</label>
-                                <input type="date" name="dob" id="dob" />
-                            </div>
-                            <div class="input-group">
-                                <label for="ID">National ID</label>
-                                <input type="number" name="ID" id="ID" />
-                            </div>
-                            <div class="btns-group">
-                                <a href="javascript: void(0);" class="btn btn-prev">Previous</a>
-                                <input type="submit" value="Submit" class="btn" />
-                            </div>
-                        </div>
-                    </form> -->
-    <!-- </div> -->
-    <!-- </div>-->
-    <!-- </div> 
-    </div> -->
     <script src="assets/js/schade.js" defer></script>
 </body>
 

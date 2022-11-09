@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Gegenereerd op: 09 nov 2022 om 10:23
+-- Gegenereerd op: 09 nov 2022 om 20:10
 -- Serverversie: 10.5.16-MariaDB
 -- PHP-versie: 7.3.32
 
@@ -54,6 +54,20 @@ INSERT INTO `boten` (`ID`, `naam`, `type`, `img_ID`, `description`, `datasheet`,
 (6, 'Jeanneau 1 & 2', 'New matic Rigiflex 360', '1-38Rn1tcG4JO3OqYCa6tUm0vhoUISR5Q', 'oranje roeiboten', 'https://drive.google.com/file/d/10-Zfy2-XSIpoNgtFch84unVZwgIcLbTD/view?usp=sharing', NULL, NULL, 1),
 (7, 'Whaly 1 & 2', 'Whaly 435', '1-RuVwV3V-DR7GiHtbLMesImIp7yMeBfA', 'rode roeiboten', 'https://drive.google.com/file/d/1rwnf76i1quRVyNWlQdBqotdZy5XaP1Yj/view?usp=sharing', NULL, NULL, 1);
 
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `schade`
+--
+
+DROP TABLE IF EXISTS `schade`;
+CREATE TABLE `schade` (
+  `ID` int(11) NOT NULL,
+  `bootid` int(11) NOT NULL,
+  `prioriteit` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(250) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 --
 -- Indexen voor geëxporteerde tabellen
 --
@@ -65,6 +79,13 @@ ALTER TABLE `boten`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexen voor tabel `schade`
+--
+ALTER TABLE `schade`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `bootid` (`bootid`);
+
+--
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
@@ -73,6 +94,22 @@ ALTER TABLE `boten`
 --
 ALTER TABLE `boten`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT voor een tabel `schade`
+--
+ALTER TABLE `schade`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Beperkingen voor geëxporteerde tabellen
+--
+
+--
+-- Beperkingen voor tabel `schade`
+--
+ALTER TABLE `schade`
+  ADD CONSTRAINT `bootid` FOREIGN KEY (`bootid`) REFERENCES `boten` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

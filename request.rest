@@ -22,3 +22,10 @@ Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ5MnZ0TV
 ###
 
 GET https://zeescouts.000webhostapp.com/getboten.php
+
+###
+
+POST https://apizee1.000webhostapp.com/postboten.php
+Content-Type: application/x-www-form-urlencoded
+
+id=4LEtYMU4PL9yy&bootid=1&desc=

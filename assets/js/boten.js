@@ -43,6 +43,7 @@ function loadboten() {
 
                 select = document.getElementById('bootnaam');
                 var opt = document.createElement('option');
+                opt.setAttribute('data-bootid',  boten[i].id);
                 opt.value = boten[i].naam;
                 opt.innerHTML = boten[i].naam;
                 select.appendChild(opt);
