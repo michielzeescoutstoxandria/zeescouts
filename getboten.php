@@ -25,17 +25,26 @@ if ($result = $conn->query($sql)) {
     while ($row = $result->fetch_assoc()) {
         $row_naam = $row["naam"];
         $row_type = $row["type"];
-		$row_img = $row["img"];
-	
+		$row_img_id = $row["img_ID"];
+        $row_desc = $row["description"];
+        $row_datasheet = $row["datasheet"];
+		$row_color1 = $row["color_1"];
+        $row_color2 = $row["color_2"];
+        $row_bes = $row["beschikbaar"];
 
 		
-	$data = array(
-		'naam' => $row_naam,
-		'type' => $row_type, 
-		'img' => $row_img
-			     );
-    $arr[$inc] = $data;
-    $inc++;
+        $data = array(
+            'naam' => $row_naam,
+            'type' => $row_type, 
+            'img_ID' => $row_img_id,
+            'description' => $row_desc,
+            'datasheet' => $row_datasheet, 
+            'color_1' => $row_color1,
+            'color_2' => $row_color2,
+            'beschikbaar' => $row_bes
+                    );
+        $arr[$inc] = $data;
+        $inc++;
     }
 	header('Content-type: application/json');
 	echo json_encode($arr);
