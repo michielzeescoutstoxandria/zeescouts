@@ -77,7 +77,7 @@ function materiaalmeesterfunction() {
           if (req.status == 200) {
             console.log("ok");
             json = JSON.parse(this.responseText);
-            redirect(json);
+            // redirect(json);
 
           } else if (req.status == 403) {
             alert('Forbidden');
@@ -93,6 +93,7 @@ function materiaalmeesterfunction() {
 }
 
 function materiaalmeestercheck() {
+  materiaalmeesterfunction();
   var functies = json.functies;
   for (var i = 0; i < functies.length; i++) {
     if (functies[i].omschrijving == "Materiaalmeester" || functies[i].omschrijving == "Adjunct Materiaalmeester") {
