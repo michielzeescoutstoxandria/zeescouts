@@ -486,10 +486,21 @@ fieldset:disabled a.btn {
   line-height: 1;
 }
 
-/* 
-body{
-  padding-bottom: 2.5rem;
-} */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 footer {
   padding: 0;

@@ -5,6 +5,8 @@
     <script src="https://login.scoutsengidsenvlaanderen.be/auth/js/keycloak.js"></script>
     <script src="assets/js/api.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="assets/js/boten.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -20,7 +22,17 @@
             <div class="headtest">
                 <div class="nav">
                     <ul>
-                        <li><a class="active none" href="#">Materiaalmeesters</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <a class="active none" href="#">Materiaalmeesters <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-content">
+                                    <li>
+                                    <a href="leiding.html">Leiding</a>
+                                </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li style="float:right"><a href="logout.html">Logout</a></li>
                     </ul>
                 </div>

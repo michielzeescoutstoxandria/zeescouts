@@ -92,7 +92,7 @@ function loadboten() {
 }
 
 function loadcards() {
-    loadboten();
+    // loadboten();
 
     // for (var i = 0; i < boten.length; i++) {
     //     var botenitem = document.createElement('li');
