@@ -59,6 +59,16 @@ function hideloader() {
   document.getElementById('loading').style.display = 'none';
 }
 
+function materiaalmeestercheck() {
+  materiaalmeesterfunction();
+  var functies = json.functies;
+  for (var i = 0; i < functies.length; i++) {
+    if (functies[i].omschrijving == "Materiaalmeester" || functies[i].omschrijving == "Adjunct Materiaalmeester") {
+      return true;
+    }
+  }
+}
+
 function materiaalmeesterfunction() {
   keycloak.updateToken(10)
     .then(function () {
@@ -92,15 +102,7 @@ function materiaalmeesterfunction() {
     });
 }
 
-function materiaalmeestercheck() {
-  materiaalmeesterfunction();
-  var functies = json.functies;
-  for (var i = 0; i < functies.length; i++) {
-    if (functies[i].omschrijving == "Materiaalmeester" || functies[i].omschrijving == "Adjunct Materiaalmeester") {
-      return true;
-    }
-  }
-}
+
 
 function redirect() {
   if (keycloak.authenticated == true) {
