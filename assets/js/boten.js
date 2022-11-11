@@ -88,11 +88,12 @@ function loadboten() {
         })
         .catch(function (err) {
             console.log("Something went wrong!", err);
+            alert("tis kapot");
         });
 }
 
 function loadcards() {
-    loadboten();
+    // loadboten();
 
     // for (var i = 0; i < boten.length; i++) {
     //     var botenitem = document.createElement('li');

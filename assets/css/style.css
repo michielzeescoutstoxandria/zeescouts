@@ -383,9 +383,9 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(32, 51, 84, 0.5);
 }
 
-.kleurdiv{
+.kleurdiv {
   position: relative;
-  
+
 }
 
 .kleur1 {
@@ -397,6 +397,7 @@ fieldset:disabled a.btn {
   top: -36px;
   border: #000 solid 1px;
 }
+
 .kleur2 {
   width: 1rem;
   height: 1.5rem;
@@ -407,7 +408,7 @@ fieldset:disabled a.btn {
   border: #000 solid 1px;
 }
 
-.kapot{
+.kapot {
   border: 4px solid rgb(255, 0, 0);
   background-color: rgba(255, 255, 255, 0.7);
 }
@@ -489,7 +490,7 @@ fieldset:disabled a.btn {
 .dropdown-content {
   display: none;
   position: absolute;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -769,89 +770,135 @@ select {
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
 }
 
-#overlay {
-  position: fixed;
-  display: none;
+.content {
+  padding: 1.25rem 1.25rem;
+  flex-grow: 1;
+}
+
+h6 {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.5385;
+}
+
+
+.card-title-table {
+  margin-bottom: 0;
+}
+
+.card-table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.1875rem;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+
+table {
+  border-collapse: collapse;
+  
+}
+
+.table {
   width: 100%;
-  height: 100%;
+  color: #333;
+}
+
+.table td,
+.table th {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75rem 1.25rem;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(221, 221, 221);
+}
+
+.table td,
+.table th,
+.table tr {
+  transition: background-color ease-in-out .15s;
+}
+
+.table-lg td,
+.table-lg th {
+  padding: 1rem 1.25rem;
+}
+
+.table tbody:first-child tr:first-child td, .table tbody:first-child tr:first-child th, div[class*=table-responsive]>.table tbody:first-child tr:first-child td, div[class*=table-responsive]>.table tbody:first-child tr:first-child th {
+  border-top: 0;
+  border-top-width: 0px;
+  border-top-style: initial;
+  border-top-color: initial;
+} 
+
+.mb-0, .my-0 {
+  margin-bottom: 0!important;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.25rem;
+  height: 1.125rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  text-align: left;
+  position: absolute;
+  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
-  cursor: pointer;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-#text {
+.slider:before {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
-  color: white;
-  transform: translate(-50%, -50%);
+  content: "";
+  width: 1.1rem;
+  height: 1.1rem;
+
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-/* .modal{
-  display: none;
-}
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 8;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  margin: 0;
-  display: grid; /*grid*/
-/*
-  place-items: center;
-  min-height: 100vh;
+input:checked + .slider {
+  background-color: #2196F3;
 }
 
-.modal-content {
-  margin: 50px auto;
-  border: 1px solid #999;
-  width: 60%;
-} */
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
 
-/* form {
+input:checked + .slider:before {
+  transform: translateX(1.125rem);
+}
 
-  box-shadow: 0 2px 5px #f5f5f5;
-  background: #eee;
-} */
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
 
-/* button:hover {
-  background: #2371a0;
+.slider.round:before {
+  border-radius: 50%;
 }
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
- button.button {
-  background: none;
-  border-top: none;
-  outline: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: #02274a 1px solid;
-  padding: 0 0 3px 0;
-  font-size: 16px;
-  cursor: pointer;
-}
-button.button:hover {
-  border-bottom: #a99567 1px solid;
-  color: #a99567;
-} */

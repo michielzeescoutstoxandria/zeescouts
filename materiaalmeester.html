@@ -10,6 +10,9 @@
     <script src="assets/js/boten.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <script src="assets/js/switchery.min.js"></script>
+    <script src="assets/js/switch.min.js"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Materiaalmeesters toxandria</title>
@@ -28,8 +31,8 @@
                                 </a>
                                 <ul class="dropdown-content">
                                     <li>
-                                    <a href="leiding.html">Leiding</a>
-                                </li>
+                                        <a href="leiding.html">Leiding</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -40,12 +43,33 @@
 
 
             <div class="preloader"></div>
+            <div class="content">
 
+                <div class="card-table">
+                    <div class="card-header bg-transparent header-elements-inline">
+                        <h6 class="card-title-table">schade boten</h6>
 
+                    </div>
 
+                    <table class="table table-lg">
+                        <thead class="card-header bg-transparent ">
+                            <tr>
+                                <th>ID</th>
+                                <th>bootnaam</th>
+                                <th>prioriteit</th>
+                                <th>Beschrijving</th>
+                                <th>persoon van aangifte</th>
+                                <th>voltooid</th>
+                              </tr>
+                        </thead>
 
-            <h1>Materiaalmeesters</h1>
-            <button><a href="leiding.html">leidings pagina</a></button>
+                        <tbody id="table-schade">
+                                                        
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
 
 
         </div>
