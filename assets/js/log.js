@@ -14,7 +14,7 @@ function loadschade() {
             for (var i = 0; i < schade.length; i++) {
                 var schadeitem = `
                     <tr>
-                        <td>1</td>
+                        <td>${schade[i].id}</td>
                         <td>${schade[i].bootnaam}</td>
                         <td>${schade[i].prioriteit}</td>
                         <td>${schade[i].description}</td>
