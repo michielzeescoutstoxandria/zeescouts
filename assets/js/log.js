@@ -102,7 +102,7 @@ function loadboten(){
 
 function voltooid(d) {
     const materiaalmeester = sessionStorage.getItem("materiaalmeester");
-    console.log(materiaalmeester);
+    console.log(keycloak);
     const id = d.getAttribute("data-id");
     console.log(d.checked);
     var data = new FormData();
