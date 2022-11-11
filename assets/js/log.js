@@ -101,6 +101,8 @@ function loadboten(){
 }
 
 function voltooid(d) {
+    const materiaalmeester = sessionStorage.getItem("materiaalmeester");
+    console.log(materiaalmeester);
     const id = d.getAttribute("data-id");
     console.log(d.checked);
     var data = new FormData();
