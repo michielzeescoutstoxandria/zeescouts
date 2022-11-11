@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT b.naam, a.prioriteit, a.description, a.persoon, a.voltooid
+$sql = "SELECT a.id, b.naam, a.prioriteit, a.description, a.persoon, a.voltooid
 FROM schade as a
 JOIN boten as b ON a.bootid=b.ID
 ORDER BY a.ID DESC";
@@ -27,6 +27,7 @@ if ($result = $conn->query($sql)) {
     $arr = [];
     $inc = 0;
     while ($row = $result->fetch_assoc()) {
+        $id = $row["id"];
         $boot = $row["naam"];
         $prior = $row["prioriteit"];
         $desc = $row["description"];
@@ -34,6 +35,7 @@ if ($result = $conn->query($sql)) {
         $klaar = $row["voltooid"];
 		
         $data = array(
+            'id' => $id,
             'bootnaam' => $boot,
             'prioriteit' => $prior,
             'description' => $desc,

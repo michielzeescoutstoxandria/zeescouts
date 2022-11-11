@@ -93,7 +93,7 @@ function loadkapot() {
 }
 
 function loadtable() {
-    // loadschade();
+    loadschade();
 }
 
 function loadboten(){

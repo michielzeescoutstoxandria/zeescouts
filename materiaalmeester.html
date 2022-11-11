@@ -7,11 +7,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="assets/js/boten.js"></script>
+    <script src="assets/js/log.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <script src="assets/js/switchery.min.js"></script>
-    <script src="assets/js/switch.min.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,6 +54,31 @@
                             <tr>
                                 <th>ID</th>
                                 <th>bootnaam</th>
+                                <th>beschikbaar</th>
+                              </tr>
+                        </thead>
+
+                        <tbody id="table-boot">
+                                                        
+                        </tbody>
+                        <script>loadboten()</script>
+
+                    </table>
+                </div>
+
+                <p></p>
+
+                <div class="card-table">
+                    <div class="card-header bg-transparent header-elements-inline">
+                        <h6 class="card-title-table">schade boten</h6>
+
+                    </div>
+
+                    <table class="table table-lg">
+                        <thead class="card-header bg-transparent ">
+                            <tr>
+                                <th>ID</th>
+                                <th>bootnaam</th>
                                 <th>prioriteit</th>
                                 <th>Beschrijving</th>
                                 <th>persoon van aangifte</th>
@@ -66,6 +89,7 @@
                         <tbody id="table-schade">
                                                         
                         </tbody>
+                        <script>loadtable()</script>
 
                     </table>
                 </div>
