@@ -101,7 +101,7 @@ function loadboten(){
 }
 
 function voltooid(d) {
-    const materiaalmeester = sessionStorage.getItem("keycloack");
+    const materiaalmeester = sessionStorage.getItem("keycloak");
     console.log(materiaalmeester);
     const id = d.getAttribute("data-id");
     console.log(d.checked);
