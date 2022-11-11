@@ -5,6 +5,7 @@ function login() {
   keycloak.init({onLoad: 'login-required'})
   .then(function() {
     materiaalmeesterfunction();
+    sessionStorage.setItem("keycloak", keycloak);
   })
   .catch(function() {
       alert('failed to initialize');
@@ -98,6 +99,7 @@ const materiaalmeestercheck = function (json) {
   for (var i = 0; i < functies.length; i++){
     if(functies[i].omschrijving == "Materiaalmeester" || functies[i].omschrijving == "Adjunct Materiaalmeester"){
       materiaalmeester = true;
+      sessionStorage.setItem("materiaalmeester", true);
     }
   }
   redirect();
