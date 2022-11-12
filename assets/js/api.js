@@ -5,8 +5,8 @@ var keycloak = new Keycloak();
 //   keycloak = sessionStorage.getItem("keycloak");
 // }
 
-const token = localStorage.getItem('kc_toke-n');
-const refreshToken = localStorage.getItem('kc_refredshToken');
+const token = localStorage.getItem('kc_token');
+const refreshToken = localStorage.getItem('kc_refreshToken');
 
 var materiaalmeester;
 if (sessionStorage.getItem("keycloak") == null) {
