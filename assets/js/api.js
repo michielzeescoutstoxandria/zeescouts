@@ -141,6 +141,10 @@ function materiaalmeesternav() {
   }
 }
 
+function islogin(){
+  console.log(keycloak.authenticated);
+}
+
 // function login(){
 //   materiaalmeester();
 //   console.log(keycloak);
