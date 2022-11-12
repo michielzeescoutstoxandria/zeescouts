@@ -106,7 +106,6 @@ const materiaalmeestercheck = function (json) {
       sessionStorage.setItem("materiaalmeester", true);
     }
   }
-  redirect();
 }
 
 function redirect() {
