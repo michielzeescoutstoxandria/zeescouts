@@ -1,9 +1,12 @@
-var keycloak;
-if (sessionStorage.getItem("keycloak") == null) {
-  keycloak = new Keycloak();
-} else {
-  keycloak = sessionStorage.getItem("keycloak");
-}
+var keycloak = new Keycloak();
+// if (sessionStorage.getItem("keycloak") == null) {
+//   keycloak = new Keycloak();
+// } else {
+//   keycloak = sessionStorage.getItem("keycloak");
+// }
+
+const token = localStorage.getItem('kc_token');
+const refreshToken = localStorage.getItem('kc_refreshToken');
 
 var materiaalmeester;
 if (sessionStorage.getItem("keycloak") == null) {
@@ -13,10 +16,11 @@ if (sessionStorage.getItem("keycloak") == null) {
 }
 
 function login() {
-  keycloak.init({ onLoad: 'login-required' })
+  keycloak.init({ onLoad: 'login-required', token, refreshToken })
     .then(function () {
       materiaalmeesterfunction();
-      sessionStorage.setItem("keycloak", keycloak);
+      localStorage.setItem('kc_token', keycloak.token);
+      localStorage.setItem('kc_refreshToken', keycloak.refreshToken);
     })
     .catch(function () {
       alert('failed to initialize');
