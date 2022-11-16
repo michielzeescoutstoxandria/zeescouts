@@ -105,9 +105,15 @@ function voltooid(d) {
     const schade_id = d.getAttribute("data-id");
     console.log(d.checked);
     var data = new FormData();
+    var bool
     data.append("id", id);
     data.append("schade_id", schade_id);
-    data.append("voltooid", d.checked);
+    if(d.checked == true){
+        bool = 1
+    }else{
+        bool = 0
+    }
+    data.append("voltooid", bool);
 
     // (B) INIT FETCH POST
     fetch("https://apizee1.000webhostapp.com/postvoltooid.php", {
@@ -138,9 +144,15 @@ function beschikbaar(d) {
     const boot_id = d.getAttribute("data-id");
     console.log(d.checked);
     var data = new FormData();
+    var bool
     data.append("id", id);
     data.append("boot_id", boot_id);
-    data.append("beschikbaar", d.checked);
+    if(d.checked == true){
+        bool = 1
+    }else{
+        bool = 0
+    }
+    data.append("beschikbaar", bool);
 
     // (B) INIT FETCH POST
     fetch("https://apizee1.000webhostapp.com/postbeschikbaar.php", {
