@@ -135,7 +135,7 @@ function voltooid(d) {
 }
 
 function beschikbaar(d) {
-    const id = d.getAttribute("data-id");
+    const boot_id = d.getAttribute("data-id");
     console.log(d.checked);
     var data = new FormData();
     data.append("id", id);
