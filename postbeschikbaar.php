@@ -17,7 +17,7 @@ $api_key = $bootid = $prior = $desc = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $api_key = test_input($_POST["id"]);
     if($api_key == $api_key_value) {
-        $id = test_input($_POST["id"]);
+        $id = test_input($_POST["boot_id"]);
         $beschikbaar = test_input($_POST["beschikbaar"]);
         
         

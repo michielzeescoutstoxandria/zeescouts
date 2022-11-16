@@ -102,10 +102,11 @@ function loadboten(){
 }
 
 function voltooid(d) {
-    const id = d.getAttribute("data-id");
+    const schade_id = d.getAttribute("data-id");
     console.log(d.checked);
     var data = new FormData();
     data.append("id", id);
+    data.append("schade_id", schade_id);
     data.append("voltooid", d.checked);
 
     // (B) INIT FETCH POST
@@ -138,6 +139,7 @@ function beschikbaar(d) {
     console.log(d.checked);
     var data = new FormData();
     data.append("id", id);
+    data.append("boot_id", boot_id);
     data.append("beschikbaar", d.checked);
 
     // (B) INIT FETCH POST
