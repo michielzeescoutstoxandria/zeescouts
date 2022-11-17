@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         } 
         
-        $sql = "UPDATE schade SET beschikbaar = '" . $voltooid . "' WHERE ID = '". $id ."'";
+        $sql = "UPDATE schade SET voltooid = '" . $voltooid . "' WHERE ID = '". $id ."'";
         
         
         if ($conn->query($sql) === TRUE) {
