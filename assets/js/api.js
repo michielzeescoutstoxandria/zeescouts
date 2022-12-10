@@ -125,7 +125,7 @@ function logout() {
   // window.location.replace("https://zeescoutstoxandria.netlify.app");
   // keycloak.logout('http://auth-server/auth/realms/Internal_Projects/protocol/openid-connect/logout?redirect_uri=encodedRedirectUri')
   //alert("Logged Out");
-  keycloak.logout({"redirectUri":"https://zeescoutstoxandria.netlify.app/logout.html"});
+  keycloak.logout({"redirectUri":"https://zeescoutstoxandria.netlify.app/"});
 }
 
 function materiaalmeesternav() {
