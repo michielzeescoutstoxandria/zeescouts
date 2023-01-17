@@ -1,0 +1,27 @@
+{
+  "name": "zeescouts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michielzeescoutstoxandria/zeescouts.git"
+  },
+  "author": "michiel muller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michielzeescoutstoxandria/zeescouts/issues"
+  },
+  "homepage": "https://github.com/michielzeescoutstoxandria/zeescouts#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "keycloak-connect": "^20.0.3"
+  }
+}
