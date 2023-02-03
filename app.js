@@ -2,6 +2,13 @@ var express = require('express');
 var app = express();
 const Keycloak = require('keycloak-connect');
 let keycloak = new Keycloak({});
+// const keycloak = new Keycloak({ store: memoryStore }, kcConfig);
+// app.use(session({
+//     secret: 'mySecret',
+//     resave: false,
+//     saveUninitialized: true,
+//     store: memoryStore
+//   }));
 app.use(keycloak.middleware());
 app.use(express.static('public'));
 
@@ -18,6 +25,7 @@ app.use(express.static('public'));
 
 var testController = require('./controller/test-controller.js');
 app.use('/test', testController);
+app.use('/secured', keycloak.protect(), securedRoutes);
 
 app.get('/admin', keycloak.protect(), function(req, res){
     res.send("Hello Admin");
@@ -97,3 +105,19 @@ app.listen(3000, () => {
 // app.listen(3000, () => {
 //   console.log('Server running on port 3000');
 // });
+
+
+// var express = require('express');
+// var app = express();
+
+// const keycloak = require('./config/keycloak-config.js').initKeycloak();
+// app.use(keycloak.middleware());
+
+// const testController = require('./controller/test-controller.js');
+// app.use('/test', testController);
+
+// app.get('/', function(req, res){
+//    res.send("Server is up!");
+// });
+
+// app.listen(3000);

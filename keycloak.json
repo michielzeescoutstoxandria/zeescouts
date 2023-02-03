@@ -1,8 +1,8 @@
-  {
-    "realm": "scouts",
-    "auth-server-url": "https://login.scoutsengidsenvlaanderen.be/auth/",
-    "ssl-required": "all",
-    "resource": "groep-A4122G-Zeescouts-Toxandria-Turnhout",
-    "public-client": true,
-    "confidential-port": 0
-    }
+{
+  "realm": "scouts",
+  "auth-server-url": "https://login.scoutsengidsenvlaanderen.be/auth/",
+  "ssl-required": "all",
+  "resource": "groep-A4122G-Zeescouts-Toxandria-Turnhout",
+  "public-client": true,
+  "confidential-port": 0
+}
