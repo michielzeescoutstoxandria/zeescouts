@@ -23,7 +23,7 @@ app.use(express.static('public'));
 
 
 
-var testController = require('./controller/test-controller.js');
+var testController = require('../controller/test-controller.js');
 app.use('/test', testController);
 app.use('/secured', keycloak.protect(), securedRoutes);
 
