@@ -114,6 +114,16 @@
         </form>
     </div>
     <script src="assets/js/schade.js" defer></script>
+    <script src="/keycloak.js"></script>
+<script>
+  var keycloak = new Keycloak();
+  keycloak.init({ onLoad: 'login-required' }).success(function () {
+    // user is authenticated and authorized
+  }).error(function () {
+    // user is not authenticated and authorized
+  });
+</script>
+
 </body>
 
 </html>
