@@ -118,9 +118,9 @@
 <script>
   var keycloak = new Keycloak();
   keycloak.init({ onLoad: 'login-required' }).success(function () {
-    // user is authenticated and authorized
+    console.log('login');
   }).error(function () {
-    // user is not authenticated and authorized
+    console.log('rip');
   });
 </script>
 
