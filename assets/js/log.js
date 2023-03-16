@@ -69,15 +69,11 @@ function loadlog() {
                         <td>${schade[i].description}</td>
                         <td>${schade[i].persoon}</td>
                         <td>
-                                    
-                                    <label class="switch">
-                                        
-                                        <input type="checkbox" id="check${i}" data-id="${schade[i].id}" onclick="voltooid(this)" ${checkvoltooid(schade[i].voltooid)}>
-                                        <span class="slider round"></span>
-                                        
-                                    </label>
+                            <label class="switch">
+                                <input type="checkbox" id="check${i}" data-id="${schade[i].id}" onclick="voltooid(this)" ${checkvoltooid(schade[i].voltooid)}>
+                                <span class="slider round"></span>
+                            </label>
                         </td>
-                        
                     </tr>
                 `;
                 schadelijst.innerHTML += schadeitem;
