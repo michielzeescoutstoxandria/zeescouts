@@ -14,24 +14,20 @@ function loadschade() {
             var schadelijst = document.getElementById('table-schade');
             for (var i = 0; i < schade.length; i++) {
                 var schadeitem = `
-                    <tr>
-                        <td>${schade[i].bootnaam}</td>
-                        <td>${schade[i].prioriteit}</td>
-                        <td>${schade[i].description}</td>
-                        <td>${schade[i].persoon}</td>
-                        <td>
-                                    
-                                    <label class="switch">
-                                        
-                                        <input type="checkbox" id="check${i}" data-id="${schade[i].id}" onclick="voltooid(this)" ${checkvoltooid(schade[i].voltooid)}>
-                                        <span class="slider round"></span>
-                                        
-                                    </label>
-                        </td>
-                        
-                    </tr>
-                `;
-                if (schade[i].voltooid == 0){
+                <tr>
+                    <td>${schade[i].bootnaam}</td>
+                    <td>${schade[i].prioriteit}</td>
+                    <td>${schade[i].description}</td>
+                    <td>${schade[i].persoon}</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" id="check${i}" data-id="${schade[i].id}" onclick="voltooid(this)" ${checkvoltooid(schade[i].voltooid)}>
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                </tr>
+            `;
+                if (schade[i].voltooid == 0) {
                     schadelijst.innerHTML += schadeitem;
                 }
             }
