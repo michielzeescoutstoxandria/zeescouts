@@ -31,7 +31,6 @@ function loadschade() {
                     schadelijst.innerHTML += schadeitem;
                 }
             }
-
         })
         .catch(function (err) {
             console.log("Something went wrong!", err);
@@ -78,7 +77,6 @@ function loadlog() {
                 `;
                 schadelijst.innerHTML += schadeitem;
             }
-
         })
         .catch(function (err) {
             console.log("Something went wrong!", err);
@@ -104,21 +102,15 @@ function loadkapot() {
                     <tr>
                         <td>${boot[i].naam}</td>
                         <td>
-                                    
-                                    <label class="switch">
-                                        
-                                        <input type="checkbox" id="beschikbaar${boot[i].id}" data-id="${boot[i].id}" onclick="beschikbaar(this)" ${checkvoltooid(boot[i].beschikbaar)}>
-                                        <span class="slider round"></span>
-                                        
-                                    </label>
+                            <label class="switch">
+                                <input type="checkbox" id="beschikbaar${boot[i].id}" data-id="${boot[i].id}" onclick="beschikbaar(this)" ${checkvoltooid(boot[i].beschikbaar)}>
+                                <span class="slider round"></span>
+                            </label>
                         </td>
-                        
                     </tr>
                 `;
                 bootlijst.innerHTML += bootitem;
-
             }
-
         })
         .catch(function (err) {
             console.log("Something went wrong!", err);
