@@ -1,6 +1,7 @@
 const id = "4LEtYMU4PL9yy";
 function loadschade() {
-    fetch('https://apizee1.000webhostapp.com/getschade.php', {
+    // https://apizee1.000webhostapp.com/getschade.php
+    fetch('assets/json/schade.json', {
         headers: {
             'Accept': 'application/json',
         },
