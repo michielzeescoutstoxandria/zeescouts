@@ -22,7 +22,8 @@
 // }
 
 function loadboten() {
-    fetch('https://apizee1.000webhostapp.com/getboten.php', {
+    // https://apizee1.000webhostapp.com/getboten.php
+    fetch('assets/json/boten.json', {
         headers: {
             'Accept': 'application/json',
         },

@@ -1,0 +1,79 @@
+[
+    {
+        "id": "1",
+        "naam": "stormvogel",
+        "type": "BM",
+        "img_ID": "1-YfVH0eq2lwVyU3nWc9dOh_N9e1F2LXJ",
+        "description": "Grootzeil Lion Sails (Gaffelzeil)\r\nFokzeil Lion Sails",
+        "datasheet": "https:\/\/drive.google.com\/file\/d\/1x6gLJQFxvr1ihPqvZBbrstd3xUSR1CNK\/view?usp=sharing",
+        "color_1": "ffffff",
+        "color_2": "2104d2",
+        "beschikbaar": "0"
+    },
+    {
+        "id": "2",
+        "naam": "Dulle Griet",
+        "type": "drasombe lugger",
+        "img_ID": "15kZKTuHDf9APGQn9wId6P9gphTB2VcrH",
+        "description": "Grootzeil Westway & Co (Gaffelzeil)\r\nFokzeil Westway & Co (Rolfok)\r\nBezaan Westway & Co",
+        "datasheet": "https:\/\/drive.google.com\/file\/d\/1veUXzPa7-m9ZlE-5S065tk5JNT_uukME\/view?usp=sharing",
+        "color_1": "ff0000",
+        "color_2": "000000",
+        "beschikbaar": "0"
+    },
+    {
+        "id": "3",
+        "naam": "Helga",
+        "type": "flying arrow",
+        "img_ID": "1-h5_cOtgy91UWSRVnS2tQ3gehgu6Z9Gn",
+        "description": "Grootzeil landtmeters Sailes\r\nFokzeil landmeters Sailes",
+        "datasheet": "https:\/\/drive.google.com\/file\/d\/1EgydMk7fVtr5LPktf92xm_BA_m2rr9QR\/view?usp=sharing",
+        "color_1": "ffff00",
+        "color_2": "2104d2",
+        "beschikbaar": "0"
+    },
+    {
+        "id": "4",
+        "naam": "Kniertje",
+        "type": "volksboot 480",
+        "img_ID": "1-WYJGgh7pEfu0ELxk_qTvPuXOHoZLcKG",
+        "description": "Grootzeil\r\nFokzeil\r\nidem Alcedo",
+        "datasheet": "https:\/\/drive.google.com\/file\/d\/1K8Qq1IwBYL4LDdGsBjPpSXcHFBljAb_u\/view?usp=sharing",
+        "color_1": "2104d2",
+        "color_2": "2104d2",
+        "beschikbaar": "0"
+    },
+    {
+        "id": "5",
+        "naam": "Alcedo",
+        "type": "volksboot 480",
+        "img_ID": "1-bxh9dHA-uE2IT9p9N7yl28eDEVZ-9og",
+        "description": "Grootzeil\r\nFokzeil\r\nidem Kniertje",
+        "datasheet": "https:\/\/drive.google.com\/file\/d\/1cHrgl3vVM2Av5apsJLOtg3dw4f3mS2mG\/view?usp=sharing",
+        "color_1": "ffffff",
+        "color_2": "ffffff",
+        "beschikbaar": "0"
+    },
+    {
+        "id": "6",
+        "naam": "Jeanneau 1 & 2",
+        "type": "New matic Rigiflex 360",
+        "img_ID": "1-38Rn1tcG4JO3OqYCa6tUm0vhoUISR5Q",
+        "description": "oranje roeiboten",
+        "datasheet": "https:\/\/drive.google.com\/file\/d\/10-Zfy2-XSIpoNgtFch84unVZwgIcLbTD\/view?usp=sharing",
+        "color_1": null,
+        "color_2": null,
+        "beschikbaar": "1"
+    },
+    {
+        "id": "7",
+        "naam": "Whaly 1 & 2",
+        "type": "Whaly 435",
+        "img_ID": "1-RuVwV3V-DR7GiHtbLMesImIp7yMeBfA",
+        "description": "rode roeiboten",
+        "datasheet": "https:\/\/drive.google.com\/file\/d\/1rwnf76i1quRVyNWlQdBqotdZy5XaP1Yj\/view?usp=sharing",
+        "color_1": null,
+        "color_2": null,
+        "beschikbaar": "1"
+    }
+]
