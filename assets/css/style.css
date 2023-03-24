@@ -796,6 +796,7 @@ h6 {
   background-clip: border-box;
   border-radius: 0.1875rem;
   border: 1px solid rgba(0,0,0,.125);
+  overflow-x:auto;
 }
 
 
