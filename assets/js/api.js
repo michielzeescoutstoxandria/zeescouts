@@ -125,7 +125,7 @@ function logout() {
   // window.location.replace("https://zeescoutstoxandria.netlify.app");
   // keycloak.logout('http://auth-server/auth/realms/Internal_Projects/protocol/openid-connect/logout?redirect_uri=encodedRedirectUri')
   //alert("Logged Out");
-  keycloak.logout({"redirectUri":"https://zeescoutstoxandria.netlify.app/"});
+  keycloak.logout({ "redirectUri": "https://zeescoutstoxandria.netlify.app/" });
 }
 
 function materiaalmeesternav() {
@@ -134,21 +134,21 @@ function materiaalmeesternav() {
     var homenav = document.getElementById('homenav');
 
     var nav = `
-                            <div class="dropdown">
-                                <a class="active none" href="#">Materiaalmeesters <i class="fa fa-caret-down"></i>
-                                </a>
-                                <ul class="dropdown-content">
-                                    <li>
-                                        <a href="leiding.html">Leiding</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        `;
+            <div class="dropdown">
+                <a class="active none" href="#">Materiaalmeesters <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-content">
+                    <li>
+                        <a href="leiding.html">Leiding</a>
+                    </li>
+                </ul>
+            </div>
+        `;
     homenav.innerHTML = nav;
   }
 }
 
-function islogin(){
+function islogin() {
   console.log(keycloak.authenticated);
 }
 
