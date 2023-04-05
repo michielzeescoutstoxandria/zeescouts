@@ -25,6 +25,13 @@ function login() {
     .catch(function () {
       alert('failed to initialize');
     });
+
+  // var keycloak = new Keycloak();
+  // keycloak.init({ onLoad: 'login-required' }).success(function () {
+  //   console.log('login');
+  // }).error(function () {
+  //   console.log('rip');
+  // });
 }
 
 const api_url = "https://groepsadmin.scoutsengidsenvlaanderen.be/groepsadmin/rest-ga/functie";

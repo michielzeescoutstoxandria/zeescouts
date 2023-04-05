@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onload="login()">
     <div id="page-container" class=" bg-dark">
         <div id="content-wrap">
             <div class="headtest">
@@ -116,12 +116,12 @@
     <script src="assets/js/schade.js" defer></script>
     <script src="/keycloak.js"></script>
 <script>
-  var keycloak = new Keycloak();
-  keycloak.init({ onLoad: 'login-required' }).success(function () {
-    console.log('login');
-  }).error(function () {
-    console.log('rip');
-  });
+//   var keycloak = new Keycloak();
+//   keycloak.init({ onLoad: 'login-required' }).success(function () {
+//     console.log('login');
+//   }).error(function () {
+//     console.log('rip');
+//   });
 </script>
 
 </body>
