@@ -23,7 +23,7 @@
 
 function loadboten() {
     // https://apizee1.000webhostapp.com/getboten.php
-    fetch('assets/json/boten.json', {
+    fetch('https://apizee1.000webhostapp.com/getboten.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -96,44 +96,44 @@ function loadboten() {
 function loadcards() {
     loadboten();
 
-    // for (var i = 0; i < boten.length; i++) {
-    //     var botenitem = document.createElement('li');
-    //     botenitem.innerHTML = boten[i].naam;
-    //     botenlijst.appendChild(botenitem);
-    // }
-    // var botenlijst = document.getElementById('boot');
-    // var botenitem = `
-    //                 <div class="card kapot">
-    //                     <img src="https://drive.google.com/uc?export=view&id=1-YfVH0eq2lwVyU3nWc9dOh_N9e1F2LXJ" class="card-img-top" width="20px">
-    //                     <div class="card-body clearfix">
-    //                         <h4 class="card-title">stormvogel</h4>
-    //                         <div class="kleurdiv">
-    //                             <span class="kleur1"></span>
-    //                             <span class="kleur2"></span>
-    //                         </div>
-    //                         <p class="card-text border-light border-top border-bottom">
-    //                             <span class="row">
-    //                                 <span class="col-6 text-muted text-left">
-    //                                     <a href="" class="btn btn-outline-dark float-left">Datasheet</a>
-    //                                 </span>
-    //                                 <span class="col-6 text-muted text-right">
-    //                                     <a href="javascript: void(0);" class="btn btn-outline-dark float-right schade" onclick="schadeBtn(this)"
-    //                                         data-boot=stormvogel data-bootnaam="1">schade</a>
-    //                                 </span>
-    //                             </span>
-    //                         </p>
-    //                         <p class="card-text">Dit is een test card</p>
-    //                     </div>
-    //                 </div>
-    //             `;
-    // botenlijst.innerHTML += botenitem;
+    for (var i = 0; i < boten.length; i++) {
+        var botenitem = document.createElement('li');
+        botenitem.innerHTML = boten[i].naam;
+        botenlijst.appendChild(botenitem);
+    }
+    var botenlijst = document.getElementById('boot');
+    var botenitem = `
+                    <div class="card kapot">
+                        <img src="https://drive.google.com/uc?export=view&id=1-YfVH0eq2lwVyU3nWc9dOh_N9e1F2LXJ" class="card-img-top" width="20px">
+                        <div class="card-body clearfix">
+                            <h4 class="card-title">stormvogel</h4>
+                            <div class="kleurdiv">
+                                <span class="kleur1"></span>
+                                <span class="kleur2"></span>
+                            </div>
+                            <p class="card-text border-light border-top border-bottom">
+                                <span class="row">
+                                    <span class="col-6 text-muted text-left">
+                                        <a href="" class="btn btn-outline-dark float-left">Datasheet</a>
+                                    </span>
+                                    <span class="col-6 text-muted text-right">
+                                        <a href="javascript: void(0);" class="btn btn-outline-dark float-right schade" onclick="schadeBtn(this)"
+                                            data-boot=stormvogel data-bootnaam="1">schade</a>
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="card-text">Dit is een test card</p>
+                        </div>
+                    </div>
+                `;
+    botenlijst.innerHTML += botenitem;
 
-    // select = document.getElementById('bootnaam');
-    // var opt = document.createElement('option');
-    // opt.setAttribute('data-bootid', '1');
-    // opt.value = 'stormvogel';
-    // opt.innerHTML = 'stormvogel';
-    // select.appendChild(opt);
+    select = document.getElementById('bootnaam');
+    var opt = document.createElement('option');
+    opt.setAttribute('data-bootid', '1');
+    opt.value = 'stormvogel';
+    opt.innerHTML = 'stormvogel';
+    select.appendChild(opt);
 
 }
 
