@@ -1,7 +1,7 @@
 const id = "4LEtYMU4PL9yy";
 function loadschade() {
     // https://apizee1.000webhostapp.com/getschade.php
-    fetch('assets/json/schade.json', {
+    fetch('https://apizee1.000webhostapp.com/getschade.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -50,7 +50,7 @@ function checkvoltooid(voltooid) {
 
 function loadlog() {
     // https://apizee1.000webhostapp.com/getschade.php
-    fetch('assets/json/schade.json', {
+    fetch('https://apizee1.000webhostapp.com/getschade.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -88,7 +88,7 @@ function loadlog() {
 
 function loadkapot() {
     // https://apizee1.000webhostapp.com/getboten.php
-    fetch('assets/json/boten.json', {
+    fetch('https://apizee1.000webhostapp.com/getboten.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -144,27 +144,27 @@ function voltooid(d) {
     data.append("voltooid", bool);
 
     // (B) INIT FETCH POST
-    // fetch("https://apizee1.000webhostapp.com/postvoltooid.php", {
-    //     method: "POST",
-    //     body: data
-    // })
+    fetch("https://apizee1.000webhostapp.com/postvoltooid.php", {
+        method: "POST",
+        body: data
+    })
 
-    //     // (C) RETURN SERVER RESPONSE AS TEXT
-    //     .then((result) => {
-    //         if (result.status != 200) { throw new Error("Bad Server Response"); }
-    //         return result.text();
-    //     })
+        // (C) RETURN SERVER RESPONSE AS TEXT
+        .then((result) => {
+            if (result.status != 200) { throw new Error("Bad Server Response"); }
+            return result.text();
+        })
 
-    //     // (D) SERVER RESPONSE
-    //     .then((response) => {
-    //         console.log(response);
-    //     })
+        // (D) SERVER RESPONSE
+        .then((response) => {
+            console.log(response);
+        })
 
-    //     // (E) HANDLE ERRORS - OPTIONAL
-    //     .catch((error) => {
-    //         console.log(error);
-    //         alert("tis kapot")
-    //     });
+        // (E) HANDLE ERRORS - OPTIONAL
+        .catch((error) => {
+            console.log(error);
+            alert("tis kapot")
+        });
 
     // (F) PREVENT FORM SUBMIT
     return false;
@@ -185,27 +185,27 @@ function beschikbaar(d) {
     data.append("beschikbaar", bool);
 
     // (B) INIT FETCH POST
-    // fetch("https://apizee1.000webhostapp.com/postbeschikbaar.php", {
-    //     method: "POST",
-    //     body: data
-    // })
+    fetch("https://apizee1.000webhostapp.com/postbeschikbaar.php", {
+        method: "POST",
+        body: data
+    })
 
-    //     // (C) RETURN SERVER RESPONSE AS TEXT
-    //     .then((result) => {
-    //         if (result.status != 200) { throw new Error("Bad Server Response"); }
-    //         return result.text();
-    //     })
+        // (C) RETURN SERVER RESPONSE AS TEXT
+        .then((result) => {
+            if (result.status != 200) { throw new Error("Bad Server Response"); }
+            return result.text();
+        })
 
-    //     // (D) SERVER RESPONSE
-    //     .then((response) => {
-    //         console.log(response);
-    //     })
+        // (D) SERVER RESPONSE
+        .then((response) => {
+            console.log(response);
+        })
 
-    //     // (E) HANDLE ERRORS - OPTIONAL
-    //     .catch((error) => {
-    //         console.log(error);
-    //         alert("tis kapot")
-    //     });
+        // (E) HANDLE ERRORS - OPTIONAL
+        .catch((error) => {
+            console.log(error);
+            alert("tis kapot")
+        });
 
     // (F) PREVENT FORM SUBMIT
     return false;
