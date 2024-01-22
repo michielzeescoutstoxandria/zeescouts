@@ -22,8 +22,8 @@
 // }
 
 function loadboten() {
-    // https://apizee1.000webhostapp.com/getboten.php
-    fetch('https://apizee1.000webhostapp.com/getboten.php', {
+    // https://apizee.000webhostapp.com/getboten.php
+    fetch('https://apizee.000webhostapp.com/getboten.php', {
         headers: {
             'Accept': 'application/json',
         },
