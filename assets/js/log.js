@@ -1,7 +1,7 @@
 const id = "4LEtYMU4PL9yy";
 function loadschade() {
-    // https://apizee1.000webhostapp.com/getschade.php
-    fetch('https://apizee1.000webhostapp.com/getschade.php', {
+    // https://apizee.000webhostapp.com/getschade.php
+    fetch('https://apizee.000webhostapp.com/getschade.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -49,8 +49,8 @@ function checkvoltooid(voltooid) {
 }
 
 function loadlog() {
-    // https://apizee1.000webhostapp.com/getschade.php
-    fetch('https://apizee1.000webhostapp.com/getschade.php', {
+    // https://apizee.000webhostapp.com/getschade.php
+    fetch('https://apizee.000webhostapp.com/getschade.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -87,8 +87,8 @@ function loadlog() {
 }
 
 function loadkapot() {
-    // https://apizee1.000webhostapp.com/getboten.php
-    fetch('https://apizee1.000webhostapp.com/getboten.php', {
+    // https://apizee.000webhostapp.com/getboten.php
+    fetch('https://apizee.000webhostapp.com/getboten.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -185,7 +185,7 @@ function beschikbaar(d) {
     data.append("beschikbaar", bool);
 
     // (B) INIT FETCH POST
-    fetch("https://apizee1.000webhostapp.com/postbeschikbaar.php", {
+    fetch("https://apizee.000webhostapp.com/postbeschikbaar.php", {
         method: "POST",
         body: data
     })
