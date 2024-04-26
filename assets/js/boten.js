@@ -42,6 +42,10 @@ function loadboten() {
                 var botenitem = `
                     <div class="card" id="card${i}">
                         <img src="https://drive.google.com/uc?export=view&id=${boten[i].img_ID}" class="card-img-top" width="20px">
+                        <iframe 
+                            src="https://drive.google.com/file/d/${boten[i].img_ID}/preview" 
+                            width="20px" allow="autoplay"
+                            ></iframe>
                         <div class="card-body clearfix">
                             <h4 class="card-title">${boten[i].naam}</h4>
                             <div class="kleurdiv" id="kleurdiv${i}">
