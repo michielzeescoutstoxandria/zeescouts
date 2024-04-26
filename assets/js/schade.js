@@ -116,7 +116,7 @@ function sendData() {
     data.append("desc", document.getElementById("desc").value);
 
     // (B) INIT FETCH POST
-    fetch("https://apizee1.000webhostapp.com/postboten.php", {
+    fetch("https://apizee.000webhostapp.com/postboten.php", {
       method: "POST",
       body: data
     })
