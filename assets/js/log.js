@@ -1,7 +1,7 @@
 const id = "4LEtYMU4PL9yy";
 function loadschade() {
     // https://apizee.000webhostapp.com/getschade.php
-    fetch('https://apizee.000webhostapp.com/getschade.php', {
+    fetch('https://zeescoutstoxandria.be/materiaalmeesters/api/getschade.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -185,7 +185,7 @@ function beschikbaar(d) {
     data.append("beschikbaar", bool);
 
     // (B) INIT FETCH POST
-    fetch("https://apizee.000webhostapp.com/postbeschikbaar.php", {
+    fetch("https://zeescoutstoxandria.be/materiaalmeesters/api/postbeschikbaar.php", {
         method: "POST",
         body: data
     })
