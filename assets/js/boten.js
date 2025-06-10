@@ -23,7 +23,7 @@
 
 function loadboten() {
     // https://apizee.000webhostapp.com/getboten.php
-    fetch('https://apizee.000webhostapp.com/getboten.php', {
+    fetch('https://zeescoutstoxandria.be/materiaalmeesters/api/getboten.php', {
         headers: {
             'Accept': 'application/json',
         },
