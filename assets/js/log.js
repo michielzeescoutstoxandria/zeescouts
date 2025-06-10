@@ -50,7 +50,7 @@ function checkvoltooid(voltooid) {
 
 function loadlog() {
     // https://apizee.000webhostapp.com/getschade.php
-    fetch('https://apizee.000webhostapp.com/getschade.php', {
+    fetch('https://zeescoutstoxandria.be/materiaalmeesters/api/getschade.php', {
         headers: {
             'Accept': 'application/json',
         },
@@ -88,7 +88,7 @@ function loadlog() {
 
 function loadkapot() {
     // https://apizee.000webhostapp.com/getboten.php
-    fetch('https://apizee.000webhostapp.com/getboten.php', {
+    fetch('https://zeescoutstoxandria.be/materiaalmeesters/api/getboten.php', {
         headers: {
             'Accept': 'application/json',
         },
