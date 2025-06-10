@@ -116,7 +116,7 @@ function sendData() {
     data.append("desc", document.getElementById("desc").value);
 
     // (B) INIT FETCH POST
-    fetch("https://apizee.000webhostapp.com/postboten.php", {
+    fetch("https://zeescoutstoxandria.be/materiaalmeesters/api/postboten.php", {
       method: "POST",
       body: data
     })
