@@ -79,7 +79,7 @@ function materiaalmeesterfunction() {
       const req = new XMLHttpRequest();
       req.open('GET', url, true);
       req.setRequestHeader('Accept', 'application/json');
-      req.setRequestHeader('mode', 'no-cors');
+      //req.setRequestHeader('mode', 'no-cors');
       req.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
 
       req.onreadystatechange = function () {
@@ -87,7 +87,7 @@ function materiaalmeesterfunction() {
           if (req.status == 200) {
             console.log("ok");
             var json = JSON.parse(this.responseText);
-            materiaalmeestercheck(json);
+       //     materiaalmeestercheck(json);
 
           } else if (req.status == 403) {
             alert('Forbidden');
